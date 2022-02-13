@@ -1,0 +1,3 @@
+# SWGOH Counters Discord Bot
+
+In progress...

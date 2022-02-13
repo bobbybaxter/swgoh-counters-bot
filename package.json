@@ -1,0 +1,14 @@
+{
+  "name": "swgoh-counters-bot",
+  "version": "0.0.1",
+  "description": "Discord Bot for swgohcounters.com",
+  "main": "index.js",
+  "scripts": {
+    "dev": "node index.js"
+  },
+  "author": "Bob Baxter",
+  "license": "ISC",
+  "dependencies": {
+    "discord.js": "^13.6.0"
+  }
+}
