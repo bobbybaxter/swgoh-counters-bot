@@ -4,6 +4,9 @@ require( 'dotenv-flow' ).config( {
 } );
 require( 'dotenv' ).config( { path: '.env' } );
 
-const client = require( 'src/client' )();
+const app = {};
 
-client.login( process.env.TOKEN );
+app.toonImgs = require( 'src/setup/toonImgs' )();
+app.client = require( 'src/client' )( app );
+
+module.exports = app;

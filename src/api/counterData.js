@@ -1,6 +1,6 @@
 const fetch = require( 'node-fetch' );
 
-const baseUrl = process.env.SEARCH_API_URL;
+const baseUrl = process.env.DISCORDBOT_API_URL;
 
 module.exports = {
   async searchCounter( data ) {

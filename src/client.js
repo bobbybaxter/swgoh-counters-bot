@@ -2,7 +2,6 @@ const { Client, Collection, Intents } = require( "discord.js" );
 const { REST } = require( '@discordjs/rest' );
 const { Routes } = require( 'discord-api-types/v9' );
 
-const commands = require( './commands' )();
 const events = require( './events' )();
 
 const rest = new REST( { version: '9' } ).setToken( process.env.TOKEN );
@@ -23,7 +22,8 @@ function setComponent( client, clientType, component ) {
   }
 }
 
-module.exports = () => {
+module.exports = app => {
+  const commands = require( './commands' )( app );
   const intents = new Intents();
   intents.add(
     'GUILDS',
@@ -44,6 +44,8 @@ module.exports = () => {
   } catch ( e ) {
     console.error( 'Application commands failed to register.', e );
   }
+
+  client.login( process.env.TOKEN );
 
   return client;
 };

@@ -21,7 +21,7 @@ module.exports = ( battleType, squadString ) => {
 
   if ( requestedSquadLength < neededSquadLength ) {
     const blankSquadsNeeded = neededSquadLength - requestedSquadLength;
-    for ( let i = 0; i < blankSquadsNeeded; i+=1 ) {
+    for ( let i = 0; i < blankSquadsNeeded; i += 1 ) {
       fullSquad.push( blankToon );
     }
   }
