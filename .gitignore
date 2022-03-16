@@ -3,6 +3,10 @@
 .config.json
 .firebase.config.json
 
+# Firebase
+firebase-service-account.json
+firebase-config.js
+
 # dependencies
 /node_modules
 /.pnp

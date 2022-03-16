@@ -9,7 +9,7 @@ const {
   buildSeasonText,
   buildSubText,
   buildTitleText,
-} = require( './imageTools' );
+} = require( 'src/utils/imageTools' );
 
 registerFont( 'src/assets/fonts/Oswald-Regular.ttf', { family: 'Oswald' } );
 registerFont( 'src/assets/fonts/Oswald-Light.ttf', { family: 'Oswald Light' } );
@@ -24,15 +24,15 @@ module.exports = async ( toonImgs, battleType, seasonRangeType, seasonNums, oppo
   const canvas = createCanvas( canvasWidth, canvasHeight );
   const ctx = canvas.getContext( '2d' );
 
-  await buildBackground( ctx, canvasWidth, canvasHeight );
+  await buildBackground( { ctx, canvasWidth, canvasHeight } );
   buildTitleText( ctx, ( squadSize === 5 ? 295 : 245 ), 25, 'Opponent' );
   buildTitleText( ctx, ( squadSize === 5 ? 565 : 415 ), 25, 'Counter' );
   buildMetricTitles( ctx, 20, 100, 'Battles' );
   buildMetricTitles( ctx, 67.5, 100, 'Avg Win %' );
   buildMetricTitles( ctx, 115, 100, 'Avg Banners' );
-  await buildOpponentSquad( ctx, 'counter', toonImgs, squadSize, opponentSquad );
-  await buildCounterSquad( ctx, 'counter', toonImgs, squadSize, counterSquad );
-  await buildRows( ctx, toonImgs, canvasWidth, response, rowNum, squadSize );
+  await buildOpponentSquad( { ctx, squad: opponentSquad, squadSize, toonImgs, type: 'counter' } );
+  await buildCounterSquad( { ctx, squad: opponentSquad, squadSize, toonImgs, type: 'counter' } );
+  await buildRows( { ctx, canvasWidth, counters: response, rowNum, squadSize, toonImgs } );
   buildSubText( ctx, canvasHeight, canvasWidth );
   buildSeasonText( ctx, canvasHeight, seasonNums, seasonRangeType );
 

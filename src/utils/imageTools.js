@@ -5,7 +5,7 @@ const YELLOW = '#FEEE46';
 const HARD_COUNTER_COLOR = '#e44747';
 const SOFT_COUNTER_COLOR = '#9B47E4';
 
-async function buildBackground( ctx, canvasWidth, canvasHeight ) {
+async function buildBackground( { ctx, canvasWidth, canvasHeight } ) {
   ctx.save();
   ctx.fillStyle = 'black';
   ctx.fillRect( 0, 0, canvasWidth, canvasHeight );
@@ -38,17 +38,19 @@ async function buildCircle( ctx, img, x, y, color ) {
   ctx.restore();
 }
 
-async function buildCounterSquad( ctx, type, toonImgs, squadSize, squad ) {
-  function selectStartingX() {
-    if ( type === 'counter' || type === 'squad' ) {
-      return squadSize === 5 ? 465 : 365;
-    }
+async function buildCounterSquad( { ctx, squad, squadSize, toonImgs, type } ) {
+  function selectStartingX( type ) {
+    const values = {
+      counter: squadSize === 5 ? 465 : 365,
+      squad: squadSize === 5 ? 465 : 365,
+      character: squadSize === 5 ? 565 : 415,
+      playerSquad: squadSize === 5 ? 565 : 465,
+    };
 
-    if ( type === 'character' ) {
-      return squadSize === 5 ? 565 : 415;
-    }
+    return values[ type ];
   }
-  let starting_x = selectStartingX();
+
+  let starting_x = selectStartingX( type );
 
   if ( type === 'character' ) {
     await buildCircle( ctx, toonImgs[ squad[ 0 ].id ], starting_x, 75, GREY );
@@ -70,20 +72,31 @@ function buildMetricTitles( ctx, x, y, message ) {
   ctx.restore();
 }
 
-async function buildOpponentSquad( ctx, type, toonImgs, squadSize, squad ) {
-  function selectStartingX() {
-    if ( type === 'character' ) {
-      return squadSize === 5 ? 295 : 245;
-    }
-    return 195;
+async function buildOpponentSquad( { ctx, squad, squadPower, squadSize, toonImgs, type } ) {
+  function buildOpponentPower( power, x, y ) {
+    ctx.save();
+    ctx.font = '20px "Oswald Light"';
+    ctx.fillStyle = 'white';
+    ctx.textAlign = 'center';
+    ctx.textBaseline = 'middle';
+    ctx.fillText( `Power: ${ power }`, x, y );
+    ctx.restore();
   }
-  let starting_x = selectStartingX();
+
+  const opponentCenter_x = squadSize === 5 ? 295 : 245;
+  let starting_x = type === 'character' ? opponentCenter_x : 195;
+  let starting_y = 80;
+
+  if ( squadPower ) {
+    buildOpponentPower( squadPower.toLocaleString(), opponentCenter_x, 57.5 );
+    starting_y = 105;
+  }
 
   if ( type === 'character' ) {
-    await buildCircle( ctx, toonImgs[ squad[ 0 ].id ], starting_x, 75, GREY );
+    await buildCircle( ctx, toonImgs[ squad[ 0 ].id ], starting_x, starting_y, GREY );
   } else {
     for ( let i = 0; i < squadSize; i += 1 ) {
-      await buildCircle( ctx, toonImgs[ squad[ i ].id ], starting_x, 75, GREY );
+      await buildCircle( ctx, toonImgs[ squad[ i ].id ], starting_x, starting_y, GREY );
       starting_x += 50;
     }
   }
@@ -96,23 +109,42 @@ function buildRowBackground( ctx, canvasWidth, starting_y, rowColor ) {
   ctx.restore();
 }
 
-async function buildRows( ctx, toonImgs, canvasWidth, counters, rowNum, squadSize ) {
-  let starting_y = 150;
+async function buildRows( { ctx, canvasWidth, counters, rowNum, squadPower, squadSize, toonImgs, type } ) {
+  function buildPowerText( ctx, x, y, message ) {
+    ctx.save();
+    ctx.font = '15px "Oswald"';
+    ctx.fillStyle = 'white';
+    ctx.textBaseline = 'middle';
+    ctx.textAlign = 'right';
+    ctx.fillText( message.toLocaleString(), x - 40, y );
+    ctx.restore();
+  }
 
-  for ( let i = 0; i < rowNum; i+=1 ) {
+  function selectStartingX( type ) {
+    if ( type === 'playerSquad' ) {
+      return squadSize === 5 ? 540 : 440;
+    } 
+      
+    return squadSize === 5 ? 465 : 365;
+  }
+
+  let starting_y = squadPower ? 175 : 150;
+
+  for ( let i = 0; i < rowNum; i += 1 ) {
     let opponentStarting_x = 195;
-    let counterStarting_x = squadSize === 5 ? 465 : 365;
+    let counterStarting_x = selectStartingX( type );
     const rowColor = selectRowColor( counters[ i ].avgWin );
     buildRowBackground( ctx, canvasWidth, starting_y, rowColor );
     buildStats( ctx, counters[ i ], starting_y );
+    ( type === 'playerSquad' ) && buildPowerText( ctx, counterStarting_x, starting_y, counters[ i ].counterPower );
   
-    for ( let j = 0; j < squadSize; j+=1 ) {
+    for ( let j = 0; j < squadSize; j += 1 ) {
       await buildCircle( ctx, toonImgs[ counters[ i ].opponentSquad[ j ].id ], opponentStarting_x, starting_y, GREY );
       await buildCircle( ctx, toonImgs[ counters[ i ].counterSquad[ j ].id ], counterStarting_x, starting_y, rowColor );
       opponentStarting_x += 50;
       counterStarting_x += 50;
     }
-  
+    
     starting_y += 65;
   }
 }

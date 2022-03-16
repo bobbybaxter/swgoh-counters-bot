@@ -152,7 +152,7 @@ module.exports = [
   {
     id: "C3POCHEWBACCA",
     name: "Threepio & Chewie",
-    alias: [ "C3POCHEWBACCA", "Threepio & Chewie", "backpackchewie", "3bacca", "3chew", "chewPO", "3pac" ]
+    alias: [ "C3POCHEWBACCA", "Threepio & Chewie", "backpackchewie", "3bacca", "3chew", "chewPO", "chewpio", "threepio", "3pac" ]
   },
   {
     id: "C3POLEGENDARY",
@@ -352,7 +352,7 @@ module.exports = [
   {
     id: "EMPERORPALPATINE",
     name: "Emperor Palpatine",
-    alias: [ "EMPERORPALPATINE", "Emperor Palpatine", "palp", "ep" ]
+    alias: [ "EMPERORPALPATINE", "Emperor Palpatine", "palpatine", "palp", "ep" ]
   },
   {
     id: "ENFYSNEST",
@@ -397,7 +397,7 @@ module.exports = [
   {
     id: "FIRSTORDEREXECUTIONER",
     name: "First Order Executioner",
-    alias: [ "FIRSTORDEREXECUTIONER", "First Order Executioner", "fox" ]
+    alias: [ "FIRSTORDEREXECUTIONER", "First Order Executioner", "foe", "fox" ]
   },
   {
     id: "FIRSTORDEROFFICERMALE",
@@ -442,7 +442,7 @@ module.exports = [
   {
     id: "GENERALHUX",
     name: "General Hux",
-    alias: [ "GENERALHUX", "General Hux", "GeneralHux", "hux", "gh" ]
+    alias: [ "GENERALHUX", "General Hux", "hux", "gh" ]
   },
   {
     id: "GENERALKENOBI",
@@ -472,7 +472,7 @@ module.exports = [
   {
     id: "GLREY",
     name: "Rey",
-    alias: [ "GLREY", "glrey", "glr" ]
+    alias: [ "GLREY", "glr" ]
   },
   {
     id: "GRANDADMIRALTHRAWN",
@@ -507,7 +507,7 @@ module.exports = [
   {
     id: "GRIEVOUS",
     name: "General Grievous",
-    alias: [ "GRIEVOUS", "General Grievous", "grievous", "gg" ]
+    alias: [ "GRIEVOUS", "General Grievous", "gg" ]
   },
   {
     id: "HANSOLO",
@@ -517,12 +517,12 @@ module.exports = [
   {
     id: "HERASYNDULLAS3",
     name: "Hera Syndulla",
-    alias: [ "HERASYNDULLAS3", "Hera Syndulla", "hera" ]
+    alias: [ "HERASYNDULLAS3", "Hera Syndulla", "hera", 'syndulla' ]
   },
   {
     id: "HERMITYODA",
     name: "Hermit Yoda",
-    alias: [ "HERMITYODA", "Hermit Yoda", "hy", "hyoda", "hoda" ]
+    alias: [ "HERMITYODA", "Hermit Yoda", "hermit", "hy", "hyoda", "hoda" ]
   },
   {
     id: "HK47",
@@ -557,7 +557,7 @@ module.exports = [
   {
     id: "IDENVERSIOEMPIRE",
     name: "Iden Versio",
-    alias: [ "IDENVERSIOEMPIRE", "Iden Versio", "iden", "versio" ]
+    alias: [ "IDENVERSIOEMPIRE", "Iden Versio", "iden", "versio", "iv" ]
   },
   {
     id: "IG11",
@@ -1032,7 +1032,7 @@ module.exports = [
   {
     id: "VEERS",
     name: "General Veers",
-    alias: [ "VEERS", "General Veers", "veers", "gv" ]
+    alias: [ "VEERS", "General Veers", 'generalveers', "gv" ]
   },
   {
     id: "VISASMARR",

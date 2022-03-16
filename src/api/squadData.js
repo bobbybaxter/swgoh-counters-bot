@@ -12,6 +12,7 @@ module.exports = {
       },
       body: JSON.stringify( data ),
     } );
+
     return await response.json();
   }
 };
