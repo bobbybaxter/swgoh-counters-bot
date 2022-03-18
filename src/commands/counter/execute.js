@@ -1,74 +1,14 @@
 const _ = require( 'lodash' );
-const toons = require( 'src/utils/toons' );
 const { getSeasonRange, parseCharString } = require( 'src/utils' );
-const { searchSquad } = require( 'src/api/squadData' );
-const { getPlayerData } = require( 'src/api/playerData' );
-const { buildPlayerCounters } = require( './utils' );
-
-function formatRoster( roster ) {
-  const newRoster = [];
-  for ( let i = 0; i < toons.length; i += 1 ) {
-    const matchedCharacter = roster.filter( ownedChar => ownedChar.id === toons[ i ].id )[ 0 ];
-    if ( matchedCharacter ) {
-      newRoster.push( matchedCharacter );
-    } else {
-      newRoster.push( {
-        id: toons[ i ].id,
-        name: toons[ i ].name,
-        power: 0
-      } );
-    }
-  }
-  return newRoster;
-}
-
-function addPowerNumsToSquads( response, roster ) {
-  const mappedResponse = response.map( counter => {
-    let counterPower = 0;
-    let squadmembers = 0;
-
-    counter.counterSquad.forEach( char => {
-      const matchedCharacter = roster.filter( ownedChar => ownedChar.id === char.id )[ 0 ];
-
-      if ( char.id === 'BLANK' ) {
-        return counterPower += 0;
-      }
-
-      if ( matchedCharacter.power > 0 ) { 
-        squadmembers += 1;
-        counterPower += matchedCharacter.power;
-      } else {
-        counterPower = -100000000;
-      }
-    } );
-    
-    return {
-      ...counter,
-      counterPower,
-      squadmembers,
-    };
-  } );
-
-  return mappedResponse;
-}
-
-function filterBySquadmemberAmount( x, squadPower ) {
-  switch( x.squadmembers ) {
-  case 5: return x.counterPower >= ( squadPower - ( squadPower * .05 ));
-  case 4: return x.counterPower >= ( squadPower - ( squadPower * .10 ));
-  case 3: return x.counterPower >= ( squadPower - ( squadPower * .15 ));
-  case 2: return x.counterPower >= ( squadPower - ( squadPower * .20 ));
-  case 1: return x.counterPower >= ( squadPower - ( squadPower * .25 ));
-  default: return x;
-  }
-}
+const { searchSquad } = require( 'src/api/squad' );
+const { getPlayerDataFromSwgoh } = require( 'src/api/player' );
+const { addPowerNumsToSquads, buildPlayerCounters, filterBySquadmemberAmount, formatRoster } = require( './utils' );
 
 // TODO: consider adding a "full" option, so that they can receive more than the 25 counters
 module.exports = app => async interaction => {
   let avoidCounters, hardCounters, response, softCounters;
   const { toonImgs } = app;
-  const firebaseData = require( 'src/api/firebaseData' )( app );
-  const { options, user } = interaction;
+  const { fbUser, options, user } = interaction;
   const squadPosition = 'defense';
   const battleType = options.getString( 'battle_type' ) || '5v5';
   const seasonRangeType = options.getString( 'range' );
@@ -108,10 +48,9 @@ module.exports = app => async interaction => {
     const powerInfo = squadPower ? ` at ${ squadPower.toLocaleString() } power` : '';
     await interaction.reply( `counters against ${ squadString }${ powerInfo }` );
 
-    const fbUser = await firebaseData( user.id );
     const shouldSortByRoster = fbUser && fbUser.allyCode ? true : false;
     if ( shouldSortByRoster ) {
-      const unformattedRoster = await getPlayerData( fbUser.allyCode );
+      const unformattedRoster = await getPlayerDataFromSwgoh( fbUser.allyCode )( app );
       const roster = formatRoster( unformattedRoster );
       response = addPowerNumsToSquads( response, roster );
     } else {
@@ -152,7 +91,7 @@ module.exports = app => async interaction => {
     
     return await interaction.editReply( { files: [ image ] } );
   } catch ( e ) {
-    console.error( 'fetch error', e );
+    app.log.error( 'fetch error', e );
     return await interaction.editReply( `Error fetching squad - ${ squad }` );
   }
 };

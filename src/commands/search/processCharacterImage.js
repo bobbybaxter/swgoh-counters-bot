@@ -1,10 +1,10 @@
 const _ = require( 'lodash' );
-const { searchCharacter } = require( 'src/api/characterData' );
+const { searchCharacter } = require( 'src/api/character' );
 const { buildCharacterResponse } = require( './utils' );
 const { parseCharString } = require( 'src/utils' );
 
 module.exports = async ( {
-  toonImgs,
+  app,
   interaction,
   options,
   battleType,
@@ -12,6 +12,7 @@ module.exports = async ( {
   seasonNums,
   selectedSeason 
 } ) => {
+  const { log, toonImgs } = app;
   const characterString = options.getString( 'character' );
   const squadPosition = options.getString( 'position' );
   const uniqueCriteria = squadPosition === 'offense' ? 'opponentSquad[0].id' : 'counterSquad[0].id';
@@ -56,6 +57,7 @@ module.exports = async ( {
       
     return await interaction.editReply( { files: [ image ] } );
   } catch ( e ) {
+    log.error( 'processCharacterImage Error', e );
     return await interaction.editReply( `Error fetching squad - ${ squad }` );
   }
 };

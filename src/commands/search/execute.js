@@ -3,7 +3,7 @@ const processCharacterImage = require( "./processCharacterImage" );
 const processCounterImage = require( "./processCounterImage" );
 const processSquadImage = require( "./processSquadImage" );
 
-module.exports = ( { toonImgs } ) => async interaction => {
+module.exports = app => async interaction => {
   const { options } = interaction;
   const searchType = options.getSubcommand();
   const battleType = options.getString( 'battle_type' ) || '5v5';
@@ -14,7 +14,7 @@ module.exports = ( { toonImgs } ) => async interaction => {
   try {
     if ( searchType === 'counter' ) {
       return await processCounterImage( { 
-        toonImgs,
+        app,
         interaction,
         options,
         battleType,
@@ -26,7 +26,7 @@ module.exports = ( { toonImgs } ) => async interaction => {
 
     if ( searchType === 'squad' ) {
       return await processSquadImage( {
-        toonImgs,
+        app,
         interaction,
         options,
         battleType,
@@ -38,7 +38,7 @@ module.exports = ( { toonImgs } ) => async interaction => {
 
     if ( searchType === 'character' ) {
       return await processCharacterImage( {
-        toonImgs,
+        app,
         interaction,
         options,
         battleType,
@@ -48,7 +48,7 @@ module.exports = ( { toonImgs } ) => async interaction => {
       } );
     }
   } catch ( err ) {
-    console.error( 'Search Error :>> ', err );
+    log.error( 'Search Error :>> ', err );
     return await interaction.editReply( `Search Error` );
   }
 };

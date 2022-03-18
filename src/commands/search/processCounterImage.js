@@ -1,9 +1,9 @@
-const { searchCounter } = require( 'src/api/counterData' );
+const { searchCounter } = require( 'src/api/counter' );
 const { buildCounterResponse } = require( './utils' );
 const { parseCharString } = require( 'src/utils' );
 
 module.exports = async ( {
-  toonImgs,
+  app,
   interaction,
   options,
   battleType,
@@ -11,6 +11,7 @@ module.exports = async ( {
   seasonNums,
   selectedSeason 
 } ) => {
+  const { log, toonImgs } = app;
   const opponentSquadString = options.getString( 'opponent' );
   const counterSquadString = options.getString( 'counter' );
   await interaction.reply( `${ opponentSquadString } vs ${ counterSquadString }` );
@@ -58,6 +59,7 @@ module.exports = async ( {
     
     return await interaction.editReply( { files: [ image ] } );
   } catch ( e ) {
+    log.error( 'processCounterImage Error', e );
     return await interaction.editReply( `Error fetching counter = ${ opponentSquadString } vs ${ counterSquadString }` );
   }
 };

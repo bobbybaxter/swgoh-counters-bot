@@ -1,10 +1,10 @@
 const _ = require( 'lodash' );
-const { searchSquad } = require( 'src/api/squadData' );
+const { searchSquad } = require( 'src/api/squad' );
 const { buildSquadResponse } = require( './utils' );
 const { parseCharString } = require( 'src/utils' );
 
 module.exports = async ( {
-  toonImgs,
+  app,
   interaction,
   options,
   battleType,
@@ -12,14 +12,15 @@ module.exports = async ( {
   seasonNums,
   selectedSeason,
 } ) => {
+  const { log, toonImgs } = app;
   const squadString = options.getString( 'squad' );
   const squadPosition = options.getString( 'position' );
   const uniqueCriteria = squadPosition === 'offense' ? 'opponentSquad[0].id' : 'counterSquad[0].id';
-  await interaction.reply( `${ squadString } on ${ squadPosition }` );
+  interaction.reply( `${ squadString } on ${ squadPosition }` );
 
   const squad = parseCharString( battleType, squadString );
   if ( !Array.isArray( squad )) {
-    return await interaction.reply( `${ squadString } - Squad character "${ squad }" not found.` );
+    return interaction.reply( `${ squadString } - Squad character "${ squad }" not found.` );
   }
 
   try {
@@ -30,13 +31,13 @@ module.exports = async ( {
 
     if ( response.length === 0 ) { 
       if ( !seasonRangeType || seasonRangeType === 'three' ) {
-        return await interaction.reply( `No counters for ${ squadString } over the last 3 GAC seasons` ); 
+        return interaction.reply( `No counters for ${ squadString } over the last 3 GAC seasons` ); 
       }
       if ( seasonRangeType === 'all' ) {
-        return await interaction.reply( `No counters for ${ squadString } over all seasons` ); 
+        return interaction.reply( `No counters for ${ squadString } over all seasons` ); 
       }
       if ( seasonRangeType === 'last' ) {
-        return await interaction.reply( `No counters for ${ squadString } from last season` ); 
+        return interaction.reply( `No counters for ${ squadString } from last season` ); 
       }
     }
 
@@ -50,10 +51,9 @@ module.exports = async ( {
     const uniqueResponse = _.uniqBy( filteredResponse, uniqueCriteria );
 
     const image = await buildSquadResponse( await toonImgs, battleType, seasonRangeType, seasonNums, squad, squadPosition, uniqueResponse );
-    
-    return await interaction.editReply( { files: [ image ] } );
+    return interaction.editReply( { files: [ image ] } );
   } catch ( e ) {
-    console.error( 'fetch error', e );
-    return await interaction.editReply( `Error fetching squad - ${ squad }` );
+    log.error( 'processSquadImage Error', e );
+    return interaction.editReply( `Error fetching squad - ${ squad }` );
   }
 };
