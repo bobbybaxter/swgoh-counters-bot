@@ -1,4 +1,3 @@
-const getRefreshedToken = require( 'src/api/patreon/getRefreshedToken' );
 const updateCreatorToken = require( './updateCreatorToken' );
 
 module.exports = app => async () => {
@@ -11,7 +10,7 @@ module.exports = app => async () => {
     .then( snapshot => ( snapshot.val()) || {} );
 
   if ( creatorToken.expiresIn < now.toISOString()) {
-    creatorToken = await getRefreshedToken( app )( creatorToken.accessToken, creatorToken.refreshToken );
+    creatorToken = await app.routes.patreon.getRefreshedToken( app )( creatorToken.accessToken, creatorToken.refreshToken );
     await updateCreatorToken( app )( {
       ...creatorToken,
       id: patreonCreatorId,

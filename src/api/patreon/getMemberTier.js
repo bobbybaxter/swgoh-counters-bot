@@ -1,10 +1,6 @@
 const fetch = require( 'node-fetch' );
 
-const updateCreatorToken = require( 'src/api/firebase/updateCreatorToken' );
-const getRefreshedToken = require( './getRefreshedToken' );
-
-module.exports = app => async ( { creatorToken, membership, patreonEmail } ) => {
-  const { log } = app;
+module.exports = ( { log, routes } ) => async ( { creatorToken, membership, patreonEmail } ) => {
   let getMemberTier;
   const { accessToken, refreshToken } = creatorToken;
 
@@ -16,8 +12,8 @@ module.exports = app => async ( { creatorToken, membership, patreonEmail } ) => 
 
   if ( getMemberTier.status === 401 ) {
     log.error( `Creator Access Token (${ accessToken }) expired.` );
-    const newCreatorToken = await getRefreshedToken( app )( accessToken, refreshToken );
-    await updateCreatorToken( {
+    const newCreatorToken = await routes.patreon.getRefreshedToken( accessToken, refreshToken );
+    await routes.firebase.updateCreatorToken( {
       id: process.env.PATREON_CREATOR_ID,
       accessToken: newCreatorToken.accessToken,
       expiresIn: newCreatorToken.accessToken,

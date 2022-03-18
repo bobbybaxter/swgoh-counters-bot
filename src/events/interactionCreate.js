@@ -1,18 +1,14 @@
 const { stripIndents } = require( 'common-tags' );
+const { validateGuild, validatePatreonStatusAndTier } = require( 'src/utils' );
 
-// TODO: decouple the patreon check from the roster check
-//  so we don't ping swgoh.gg on commands that don't check
-//  against a user's roster
-module.exports = app => {
-  const { log } = app;
-  const getUserFromFirebase = require( 'src/api/firebase/getUserFromFirebase' )( app );
-
+module.exports = ( { log, routes } ) => {
   return {
     name: 'interactionCreate',
     async execute( interaction, client ) {
       let isRestricted = false;
       let isCurrentGuildInFirebase = false;
       let isNowGuildTier = false;
+      let updatedUser;
       const { channel, commandName, options, user } = interaction;
       const position = options.get( 'position', false );
       const rangeOption = options.get( 'range', false );
@@ -22,8 +18,15 @@ module.exports = app => {
       const battleTypeOption = options.get( 'battle_type', false );
       const battleType = battleTypeOption && battleTypeOption.value || '5v5';
 
-      const fbUserResponse = await getUserFromFirebase( user.id );
-      const { fbUser, guildData, units } = fbUserResponse;
+      const fbUser = await routes.firebase.getUserFromFirebase( user.id );
+      updatedUser = await validatePatreonStatusAndTier( log, routes, fbUser );
+      const guildValidationResponse = await validateGuild( log, routes, updatedUser );
+      const { guildData, units } = guildValidationResponse;
+      ( { updatedUser } = guildValidationResponse );
+
+      if ( fbUser !== updatedUser ) {
+        routes.firebase.updateUser( updatedUser );
+      }
       guildData && ( { isCurrentGuildInFirebase, isNowGuildTier } = guildData );
 
       // TODO: test all of these scenarios out
@@ -31,11 +34,11 @@ module.exports = app => {
       isCurrentGuildInFirebase = false;
 
       if ( !fbUser ) { isRestricted = true; }
-      console.log( 'isRestricted :>> ', isRestricted );
+      // console.log( 'isRestricted :>> ', isRestricted );
       if ( fbUser && fbUser.patronStatus === 'active_patron' || fbUser && fbUser.patronStatus === 'Active Patron' ) { isRestricted = true; }
-      console.log( 'isRestricted :>> ', isRestricted );
+      // console.log( 'isRestricted :>> ', isRestricted );
       if ( isCurrentGuildInFirebase || isNowGuildTier ) { isRestricted = false; }
-      console.log( 'isRestricted :>> ', isRestricted );
+      // console.log( 'isRestricted :>> ', isRestricted );
 
 
       if ( isRestricted ) {
@@ -85,9 +88,9 @@ module.exports = app => {
           log.info( `${ user.tag } in #${ channel.name } searched counter: ${ opponent } vs ${ counter }, ${ range }, ${ battleType }` );
         }
       
-        if ( subcommand === 'squad' ) {
-          const squad = options.getString( 'squad' );
-          log.info( `${ user.tag } in #${ channel.name } searched squad: ${ squad } on ${ position.value }, ${ range }, ${ battleType }` );
+        if ( subcommand === 'squad' || subcommand === 'character' ) {
+          const type = subcommand === 'squad' ? options.getString( 'squad' ) : options.getString( 'character' );
+          log.info( `${ user.tag } in #${ channel.name } searched ${ subcommand }: ${ type } on ${ position.value }, ${ range }, ${ battleType }` );
         }
       }
 

@@ -1,15 +1,12 @@
-const renamePatronStatus = require( './util/renamePatronStatus' );
-const renameTier = require( './util/renameTier' );
-const getCreatorToken = require( 'src/api/firebase/getCreatorToken' );
-const getPatreonClient = require( './getPatreonClient' );
-const getMemberTier = require( './getMemberTier' );
+const { renamePatronStatus, renameTier } = require( 'src/utils' );
 
 module.exports = app => async accessToken => {
+  const { routes } = app;
   let patronStatus = '';
   let tier = '';
   let membership, patreonEmail;
 
-  const apiClient = await getPatreonClient( app )( accessToken );
+  const apiClient = await routes.patreon.getPatreonClient( accessToken );
 
   // REVIEW: takes 230.833ms to get memberInfo
   const memberInfo = await apiClient( {
@@ -29,10 +26,10 @@ module.exports = app => async accessToken => {
 
   if ( membership ) {
     // REVIEW: takes 44.802ms to get creatorToken
-    const creatorToken = await getCreatorToken( app )();
+    const creatorToken = await routes.firebase.getCreatorToken();
 
     // REVIEW: takes 258.873ms to get memberTier
-    const memberTier = await getMemberTier( app )( { creatorToken, membership, patreonEmail } );
+    const memberTier = await routes.patreon.getMemberTier( { creatorToken, membership, patreonEmail } );
 
     if ( memberTier ) {
       patronStatus = renamePatronStatus( membership.attributes.patron_status );

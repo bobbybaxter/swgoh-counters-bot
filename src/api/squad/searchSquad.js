@@ -2,7 +2,7 @@ const fetch = require( 'node-fetch' );
 
 const baseUrl = process.env.DISCORDBOT_API_URL;
 
-module.exports = async data => {
+module.exports = app => async data => {
   const response = await fetch( `${ baseUrl }/squad`, {
     method: 'POST',
     headers: {

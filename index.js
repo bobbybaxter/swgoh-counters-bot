@@ -22,6 +22,7 @@ const app = {
 
 app.toonImgs = require( 'src/setup/toonImgs' )();
 app.firebaseDb = require( 'src/setup/firebaseAdmin' )( app );
+app.routes = require( 'src/api' )( app );
 app.client = require( 'src/client' )( app );
 
 module.exports = app;

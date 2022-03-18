@@ -1,4 +1,3 @@
-const { searchCounter } = require( 'src/api/counter' );
 const { buildCounterResponse } = require( './utils' );
 const { parseCharString } = require( 'src/utils' );
 
@@ -11,7 +10,7 @@ module.exports = async ( {
   seasonNums,
   selectedSeason 
 } ) => {
-  const { log, toonImgs } = app;
+  const { log, routes, toonImgs } = app;
   const opponentSquadString = options.getString( 'opponent' );
   const counterSquadString = options.getString( 'counter' );
   await interaction.reply( `${ opponentSquadString } vs ${ counterSquadString }` );
@@ -27,7 +26,7 @@ module.exports = async ( {
   }
 
   try {
-    const response = await searchCounter( { battleType, selectedSeason, opponentSquad, counterSquad } );
+    const response = await routes.counter.searchCounter( { battleType, selectedSeason, opponentSquad, counterSquad } );
 
     if ( response.status && response.status !== 200 ) { 
       throw new Error( `${ response.status } - ${ response.statusText }` ); 

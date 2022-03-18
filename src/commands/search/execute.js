@@ -4,6 +4,7 @@ const processCounterImage = require( "./processCounterImage" );
 const processSquadImage = require( "./processSquadImage" );
 
 module.exports = app => async interaction => {
+  const { log } = app;
   const { options } = interaction;
   const searchType = options.getSubcommand();
   const battleType = options.getString( 'battle_type' ) || '5v5';
@@ -48,7 +49,8 @@ module.exports = app => async interaction => {
       } );
     }
   } catch ( err ) {
+    console.trace( err );
     log.error( 'Search Error :>> ', err );
-    return await interaction.editReply( `Search Error` );
+    return await interaction.reply( `Search Error` );
   }
 };

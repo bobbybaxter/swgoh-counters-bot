@@ -1,13 +1,10 @@
 const _ = require( 'lodash' );
 const { getSeasonRange, parseCharString } = require( 'src/utils' );
-const { searchSquad } = require( 'src/api/squad' );
-const { getPlayerDataFromSwgoh } = require( 'src/api/player' );
 const { addPowerNumsToSquads, buildPlayerCounters, filterBySquadmemberAmount, formatRoster } = require( './utils' );
 
 // TODO: consider adding a "full" option, so that they can receive more than the 25 counters
-module.exports = app => async interaction => {
+module.exports = ( { log, routes, toonImgs } ) => async interaction => {
   let avoidCounters, hardCounters, response, softCounters;
-  const { toonImgs } = app;
   const { fbUser, options, user } = interaction;
   const squadPosition = 'defense';
   const battleType = options.getString( 'battle_type' ) || '5v5';
@@ -28,7 +25,7 @@ module.exports = app => async interaction => {
   }
 
   try {
-    response = await searchSquad( { battleType, selectedSeason, squadPosition, squad } );
+    response = await routes.squad.searchSquad( { battleType, selectedSeason, squadPosition, squad } );
     if ( response.status && response.status !== 200 ) { 
       throw new Error( `${ response.status } - ${ response.statusText }` ); 
     }
@@ -50,7 +47,7 @@ module.exports = app => async interaction => {
 
     const shouldSortByRoster = fbUser && fbUser.allyCode ? true : false;
     if ( shouldSortByRoster ) {
-      const unformattedRoster = await getPlayerDataFromSwgoh( fbUser.allyCode )( app );
+      const unformattedRoster = await routes.player.getPlayerDataFromSwgoh( fbUser.allyCode );
       const roster = formatRoster( unformattedRoster );
       response = addPowerNumsToSquads( response, roster );
     } else {
@@ -91,7 +88,7 @@ module.exports = app => async interaction => {
     
     return await interaction.editReply( { files: [ image ] } );
   } catch ( e ) {
-    app.log.error( 'fetch error', e );
+    log.error( 'fetch error', e );
     return await interaction.editReply( `Error fetching squad - ${ squad }` );
   }
 };
