@@ -4,7 +4,7 @@
   "description": "Discord Bot for swgohcounters.com",
   "main": "index.js",
   "scripts": {
-    "dev": "nodemon index.js"
+    "dev": "nodemon --trace-warnings index.js"
   },
   "author": "Bob Baxter",
   "license": "ISC",

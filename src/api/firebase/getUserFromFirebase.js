@@ -12,5 +12,9 @@ module.exports = ( { firebaseDb } ) => async discordId => {
   const userId = Object.keys( userObj )[ 0 ];
   user.id = userId;
 
+  if ( user.allyCode && user.allyCode.includes( '-' )) {
+    user.allyCode = user.allyCode.split( '-' ).join( '' );
+  }
+
   return user;
 };

@@ -5,7 +5,7 @@ const { addPowerNumsToSquads, buildPlayerCounters, filterBySquadmemberAmount, fo
 // TODO: consider adding a "full" option, so that they can receive more than the 25 counters
 module.exports = ( { log, routes, toonImgs } ) => async interaction => {
   let avoidCounters, hardCounters, response, softCounters;
-  const { fbUser, options, user } = interaction;
+  const { options, units } = interaction;
   const squadPosition = 'defense';
   const battleType = options.getString( 'battle_type' ) || '5v5';
   const seasonRangeType = options.getString( 'range' );
@@ -32,31 +32,21 @@ module.exports = ( { log, routes, toonImgs } ) => async interaction => {
 
     if ( response.length === 0 ) { 
       if ( !seasonRangeType || seasonRangeType === 'three' ) {
-        return await interaction.reply( `No counters for ${ squadString } over the last 3 GAC seasons` ); 
+        return await interaction.reply( `No counters for ${ squadString } over the last 3 GAC seasons.  Try a longer range.` ); 
       }
       if ( seasonRangeType === 'all' ) {
-        return await interaction.reply( `No counters for ${ squadString } over all seasons` ); 
+        return await interaction.reply( `No counters for ${ squadString } over all seasons.` ); 
       }
       if ( seasonRangeType === 'last' ) {
-        return await interaction.reply( `No counters for ${ squadString } from last season` ); 
+        return await interaction.reply( `No counters for ${ squadString } from last season.  Try a longer range.` ); 
       }
     }
 
     const powerInfo = squadPower ? ` at ${ squadPower.toLocaleString() } power` : '';
     await interaction.reply( `counters against ${ squadString }${ powerInfo }` );
 
-    const shouldSortByRoster = fbUser && fbUser.allyCode ? true : false;
-    if ( shouldSortByRoster ) {
-      const unformattedRoster = await routes.player.getPlayerDataFromSwgoh( fbUser.allyCode );
-      const roster = formatRoster( unformattedRoster );
-      response = addPowerNumsToSquads( response, roster );
-    } else {
-      return await interaction.editReply( `To use this command, follow the steps below to register your allycode:
-      \u200B\n
-      Copy your DiscordId: **${ user.id }**.
-      Paste it into the Account Page of [swgohcounters.com](https://swgohcounters.com/account)`, 
-      { emphemeral: true } );
-    }
+    const roster = formatRoster( units );
+    response = addPowerNumsToSquads( response, roster );
 
     const orderByColumns = [ 'avgWin', 'totalSeen', 'avgBanners' ];
     const orderByOrders = [ 'desc', 'desc', 'desc' ];

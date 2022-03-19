@@ -1,4 +1,3 @@
-const _ = require( 'lodash' );
 const aliases = require( 'src/utils/toons' );
 
 module.exports = app => async interaction => {

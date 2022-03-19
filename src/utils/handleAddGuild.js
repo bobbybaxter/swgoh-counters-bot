@@ -1,3 +1,5 @@
+const _ = require( "lodash" );
+
 module.exports = ( routes, {
   id,
   currentGuildInFirebase,

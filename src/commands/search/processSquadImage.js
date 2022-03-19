@@ -15,7 +15,7 @@ module.exports = async ( {
   const squadString = options.getString( 'squad' );
   const squadPosition = options.getString( 'position' );
   const uniqueCriteria = squadPosition === 'offense' ? 'opponentSquad[0].id' : 'counterSquad[0].id';
-  interaction.reply( `${ squadString } on ${ squadPosition }` );
+  await interaction.reply( `${ squadString } on ${ squadPosition }` );
 
   const squad = parseCharString( battleType, squadString );
   if ( !Array.isArray( squad )) {
@@ -30,13 +30,13 @@ module.exports = async ( {
 
     if ( response.length === 0 ) { 
       if ( !seasonRangeType || seasonRangeType === 'three' ) {
-        return await interaction.editReply( `No counters for ${ squadString } over the last 3 GAC seasons` ); 
+        return await interaction.editReply( `No counters for ${ squadString } over the last 3 GAC seasons.  Try a longer range.` ); 
       }
       if ( seasonRangeType === 'all' ) {
-        return await interaction.editReply( `No counters for ${ squadString } over all seasons` ); 
+        return await interaction.editReply( `No counters for ${ squadString } over all seasons.` ); 
       }
       if ( seasonRangeType === 'last' ) {
-        return await interaction.editReply( `No counters for ${ squadString } from last season` ); 
+        return await interaction.editReply( `No counters for ${ squadString } from last season.  Try a longer range.` ); 
       }
     }
 
@@ -50,6 +50,7 @@ module.exports = async ( {
     const uniqueResponse = _.uniqBy( filteredResponse, uniqueCriteria );
 
     const image = await buildSquadResponse( await toonImgs, battleType, seasonRangeType, seasonNums, squad, squadPosition, uniqueResponse );
+
     return await interaction.editReply( { files: [ image ] } );
   } catch ( e ) {
     log.error( 'processSquadImage Error', e );

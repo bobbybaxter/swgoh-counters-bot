@@ -49,7 +49,6 @@ module.exports = app => async interaction => {
       } );
     }
   } catch ( err ) {
-    console.trace( err );
     log.error( 'Search Error :>> ', err );
     return await interaction.reply( `Search Error` );
   }

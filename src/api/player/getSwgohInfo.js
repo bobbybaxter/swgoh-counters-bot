@@ -8,6 +8,15 @@ module.exports = app => async allyCode => {
   }
   const jsonResponse = await response.json();
   const contents = JSON.parse( jsonResponse.contents );
+  contents.units = contents.units
+    .filter( x => x.data.combat_type !== 2 )
+    .flatMap( x => {
+      return {
+        id: x.data.base_id,
+        name: x.data.name,
+        power: x.data.power
+      };
+    } );
 
   return await contents;
 };
