@@ -1,7 +1,8 @@
-const { values } = require( 'lodash' );
-const requireDir = require( 'require-directory' );
-
-module.exports = app => {
-  const modules = requireDir( module, { visit: m => m( app ) } );
-  return values( modules );
-};
+// TODO: build a meta command that will pull the meta teams based on the characters given
+module.exports = app => [
+  require( './counter' )( app ),
+  require( './help' )( app ),
+  require( './link' )( app ),
+  require( './ping' )( app ),
+  require( './search' )( app )
+];

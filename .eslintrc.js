@@ -54,6 +54,7 @@ module.exports = {
     'computed-property-spacing': [ 1, 'always' ],
     'semi': [ 1, 'always' ],
     'object-shorthand': [ 1, 'always' ],
-    "indent": [ 1, 2 ]
+    "indent": [ 1, 2 ],
+    "no-unused-vars": [ 1, { "args": "none" } ]
   }
 };

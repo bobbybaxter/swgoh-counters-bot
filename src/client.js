@@ -1,8 +1,8 @@
 const { Client, Collection, Intents } = require( "discord.js" );
 const { REST } = require( '@discordjs/rest' );
 const { Routes } = require( 'discord-api-types/v9' );
-
-const events = require( './events' )();
+const commandsFactory = require( './commands' );
+const eventsFactory = require( './events' );
 
 const rest = new REST( { version: '9' } ).setToken( process.env.TOKEN );
 
@@ -22,8 +22,9 @@ function setComponent( client, clientType, component ) {
   }
 }
 
-module.exports = app => {
-  const commands = require( './commands' )( app );
+module.exports = async app => {
+  const commands = await commandsFactory( app );
+  const events = await eventsFactory( app );
   const intents = new Intents();
   intents.add(
     'GUILDS',
@@ -40,9 +41,9 @@ module.exports = app => {
   
   try {
     rest.put( Routes.applicationGuildCommands( process.env.CLIENT_ID, process.env.GUILD_ID ), { body: commandsData } );
-    console.info( 'Successfully registered application commands.' );
+    app.log.info( 'Successfully registered application commands.' );
   } catch ( e ) {
-    console.error( 'Application commands failed to register.', e );
+    app.log.error( 'Application commands failed to register.', e );
   }
 
   client.login( process.env.TOKEN );
