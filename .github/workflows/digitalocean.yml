@@ -28,8 +28,5 @@ jobs:
       - name: Install dependencies
         run: yarn ci
 
-      - name: Build application
-        run: yarn start
-        
       - name: Restart server application
-        run: pm2 restart swgoh-counters-bot
+        run: yarn restart 
