@@ -4,7 +4,8 @@
   "description": "Discord Bot for swgohcounters.com",
   "main": "index.js",
   "scripts": {
-    "start": "nodemon index.js",
+    "start": "pm2 start index.js",
+    "restart": "pm2 restart index.js",
     "ci": "rm -rf node_modules && yarn install --frozen-lockfile",
     "dev": "nodemon --trace-warnings index.js"
   },
