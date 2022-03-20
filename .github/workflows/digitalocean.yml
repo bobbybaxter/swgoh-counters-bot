@@ -16,8 +16,7 @@ jobs:
           username: ${{ secrets.SSH_USERNAME }}
           
           script: |
-            mkdir swgoh-counters-bot
-            cd swgoh-counters-bot
+            rm -r swgoh-counters-bot
             git clone git@github.com:bobbybaxter/swgoh-counters-bot.git
             echo 'Deployment to Digital Ocean was successful'
           
