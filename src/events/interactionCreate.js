@@ -34,6 +34,8 @@ module.exports = ( { log, routes } ) => {
         routes.firebase.updateUser( updatedUser );
       }
 
+      updatedUser.tier = 'Aurodium'; // TODO: remove after testing
+
       if ( updatedUser.tier !== 'Aurodium' && !isCurrentGuildInFirebase ) {
         if ( updatedUser.tier === '' ) {
           return await interaction.reply( stripIndents`Our records show you're currently not a Patron, or your account is not linked.
@@ -76,13 +78,13 @@ module.exports = ( { log, routes } ) => {
       if ( commandName === 'counter' ) {
         interaction.units = units;
         if ( !updatedUser.allyCode ) {
-          return await interaction.reply( stripIndents`To use this command, follow the steps below to register your allycode:
+          return await interaction.reply( stripIndents`To use this command, follow the steps below to register your ally code:
 
             Copy your DiscordId: **${ user.id }**.
             Paste it into the Account Page of [swgohcounters.com](https://swgohcounters.com/account)
             
             `, 
-          { tts: true, emphemeral: true } );
+          { emphemeral: true } );
         }
 
         const opponent = options.getString( 'opponent' );
