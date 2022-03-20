@@ -23,7 +23,10 @@ module.exports = app => async interaction => {
           characterString += `**${ chunk[ i ].name }**: ${ nameList } \n\n`;
         }
 
-        await interaction.followUp( characterString, { ephemeral: true } );
+        await interaction.followUp( {
+          content: characterString, 
+          ephemeral: true 
+        } );
       } );
     } else {
       // TODO: search aliases based on response and return a character's aliases
