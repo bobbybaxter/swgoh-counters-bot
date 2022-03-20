@@ -21,7 +21,7 @@ jobs:
           touch .env
           echo "${{ secrets.ENV }}" > .env
           touch src/setup/.firebase-config.js
-          echo "${{ secrets.FIREBASE_CONFIG }}" > src/setup/.firebase-config.js
+          echo "${{ secrets.FIREBASE_CONFIG }}" > src/setup/firebase-config.js
           touch src/setup/firebase-service-account.json
           echo "${{ secrets.FIREBASE_SERVICE_ACCOUNT}}" > src/setup/firebase-service-account.json
 
