@@ -4,7 +4,7 @@ require( 'dotenv-flow' ).config( {
   node_env: process.env.NODE_ENV || 'development',
 } );
 require( 'dotenv' ).config( { path: '.env' } );
-const config = require( './.config.json' );
+const config = require( './config.json' );
 
 const defaultConfig = config.development;
 const environment = process.env.NODE_ENV || 'development';

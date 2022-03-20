@@ -1,0 +1,14 @@
+{
+  "development": {
+    "logging": {
+      "level": "info",
+      "prettyPrint": true
+    }
+  },
+  "production": {
+    "logging": {
+      "level": "info",
+      "prettyPrint": false
+    }
+  }
+}
