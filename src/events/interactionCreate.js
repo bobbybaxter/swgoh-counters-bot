@@ -19,12 +19,14 @@ module.exports = ( { log, routes } ) => {
       const fbUser = await routes.firebase.getUserFromFirebase( user.id );
 
       if ( !fbUser ) {
-        return await interaction.reply( stripIndents`If you or your guildmate is an Aurodium-tier Patron, follow the steps below to register your ally code:
+        return await interaction.reply( {
+          content: stripIndents`If you or your guildmate is an Aurodium-tier Patron, follow the steps below to register your ally code:
         
           Copy your DiscordId: **${ user.id }**.
           Paste it into the Account Page of [swgohcounters.com](https://swgohcounters.com/account) and make sure your ally code is also there!
         `, 
-        { ephemeral: true } );
+          ephemeral: true 
+        } );
       }
 
       updatedUser = await validatePatreonStatusAndTier( log, routes, fbUser );
@@ -38,16 +40,19 @@ module.exports = ( { log, routes } ) => {
 
       if ( updatedUser.tier !== 'Aurodium' && !isCurrentGuildInFirebase ) {
         if ( updatedUser.tier === '' ) {
-          return await interaction.reply( stripIndents`Our records show you're currently not a Patron, or your account is not linked.
+          return await interaction.reply( {
+            content: stripIndents`Our records show you're currently not a Patron, or your account is not linked.
               
               If you or your guildmate are an Aurodium-tier Patron, follow the steps below to register your ally code:
     
               Copy your DiscordId: **${ user.id }**.
               Paste it into the Account Page of [swgohcounters.com](https://swgohcounters.com/account) and make sure your ally code is also there!
             `, 
-          { ephemeral: true } );
+            ephemeral: true 
+          } );
         } else {
-          return await interaction.reply( stripIndents`Our records show you're a Patron at the ${ fbUser.tier }-tier.
+          return await interaction.reply( {
+            content: stripIndents`Our records show you're a Patron at the ${ fbUser.tier }-tier.
 
               If your guildmate is an Aurodium-tier Patron, follow the steps below to register your ally code:
 
@@ -56,7 +61,8 @@ module.exports = ( { log, routes } ) => {
 
               If not, [consider becoming a Patron](https://www.patreon.com/saiastrange) at the Aurodium-tier to access this bot.
             `, 
-          { ephemeral: true } );
+            ephemeral: true 
+          } );
         }
       }
 
@@ -78,13 +84,15 @@ module.exports = ( { log, routes } ) => {
       if ( commandName === 'counter' ) {
         interaction.units = units;
         if ( !updatedUser.allyCode ) {
-          return await interaction.reply( stripIndents`To use this command, follow the steps below to register your ally code:
+          return await interaction.reply( {
+            content: stripIndents`To use this command, follow the steps below to register your ally code:
 
             Copy your DiscordId: **${ user.id }**.
             Paste it into the Account Page of [swgohcounters.com](https://swgohcounters.com/account)
             
             `, 
-          { ephemeral: true } );
+            ephemeral: true 
+          } );
         }
 
         const opponent = options.getString( 'opponent' );
