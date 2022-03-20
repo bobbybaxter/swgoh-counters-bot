@@ -6,17 +6,30 @@ on:
 
 jobs:
   deploy:
-    runs-on: ubuntu-latest
+    runs-on: self-hosted
     steps:
-      - name: Deploy to Digital Ocean
-        uses: appleboy/ssh-action@master
+      - name: Checkout master branch
+        uses: actions/checkout@v2
+      
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
         with:
-          host: ${{ secrets.SSH_HOST }}
-          key: ${{ secrets.SSH_KEY }}
-          username: ${{ secrets.SSH_USERNAME }}
+          node-version: '16.x'
           
-          script: |
-            rm -r swgoh-counters-bot
-            git clone git@github.com:bobbybaxter/swgoh-counters-bot.git
-            echo 'Deployment to Digital Ocean was successful'
-          
+      - name: Build env variables
+        run: |
+          touch .env
+          echo "${{ secrets.ENV }}" > .env
+          touch src/setup/.firebase-config.js
+          echo "${{ secrets.FIREBASE_CONFIG }}" > src/setup/firebase-config.js
+          touch src/setup/firebase-service-account.json
+          echo "${{ secrets.FIREBASE_SERVICE_ACCOUNT}}" > src/setup/firebase-service-account.json
+
+      - name: Install dependencies
+        run: yarn ci
+
+      - name: Build application
+        run: yarn start
+        
+      - name: Restart server application
+        run: pm2 restart swgoh-counters-bot
