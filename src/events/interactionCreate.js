@@ -24,7 +24,7 @@ module.exports = ( { log, routes } ) => {
           Copy your DiscordId: **${ user.id }**.
           Paste it into the Account Page of [swgohcounters.com](https://swgohcounters.com/account) and make sure your ally code is also there!
         `, 
-        { emphemeral: true } );
+        { ephemeral: true } );
       }
 
       updatedUser = await validatePatreonStatusAndTier( log, routes, fbUser );
@@ -45,7 +45,7 @@ module.exports = ( { log, routes } ) => {
               Copy your DiscordId: **${ user.id }**.
               Paste it into the Account Page of [swgohcounters.com](https://swgohcounters.com/account) and make sure your ally code is also there!
             `, 
-          { emphemeral: true } );
+          { ephemeral: true } );
         } else {
           return await interaction.reply( stripIndents`Our records show you're a Patron at the ${ fbUser.tier }-tier.
 
@@ -56,7 +56,7 @@ module.exports = ( { log, routes } ) => {
 
               If not, [consider becoming a Patron](https://www.patreon.com/saiastrange) at the Aurodium-tier to access this bot.
             `, 
-          { emphemeral: true } );
+          { ephemeral: true } );
         }
       }
 
@@ -84,7 +84,7 @@ module.exports = ( { log, routes } ) => {
             Paste it into the Account Page of [swgohcounters.com](https://swgohcounters.com/account)
             
             `, 
-          { emphemeral: true } );
+          { ephemeral: true } );
         }
 
         const opponent = options.getString( 'opponent' );
