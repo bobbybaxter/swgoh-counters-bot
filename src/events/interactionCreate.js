@@ -22,8 +22,8 @@ module.exports = ( { log, routes } ) => {
         return await interaction.reply( {
           content: stripIndents`If you or your guildmate is an Aurodium-tier Patron, follow the steps below to register your ally code:
         
-          Copy your DiscordId: **${ user.id }**.
-          Paste it into the Account Page of [swgohcounters.com](https://swgohcounters.com/account) and make sure your ally code is also there!
+          Log into [swgohcounters.com](https://swgohcounters.com/account)
+          Navigate to the Account Page and enter your ally code
         `, 
           ephemeral: true 
         } );
@@ -45,8 +45,9 @@ module.exports = ( { log, routes } ) => {
               
               If you or your guildmate are an Aurodium-tier Patron, follow the steps below to register your ally code:
     
-              Copy your DiscordId: **${ user.id }**.
-              Paste it into the Account Page of [swgohcounters.com](https://swgohcounters.com/account) and make sure your ally code is also there!
+              Copy your DiscordId: **${ user.id }**
+              Log into [swgohcounters.com](https://swgohcounters.com/account)
+              Navigate to the Account Page and enter your DiscordId and ally code
             `, 
             ephemeral: true 
           } );
@@ -56,8 +57,9 @@ module.exports = ( { log, routes } ) => {
 
               If your guildmate is an Aurodium-tier Patron, follow the steps below to register your ally code:
 
-              Copy your DiscordId: **${ user.id }**.
-              Paste it into the Account Page of [swgohcounters.com](https://swgohcounters.com/account) and make sure your ally code is also there!
+              Copy your DiscordId: **${ user.id }**
+              Log into [swgohcounters.com](https://swgohcounters.com/account)
+              Navigate to the Account Page and enter your DiscordId and ally code
 
               If not, [consider becoming a Patron](https://www.patreon.com/saiastrange) at the Aurodium-tier to access this bot.
             `, 

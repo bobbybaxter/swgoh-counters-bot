@@ -5,8 +5,9 @@ module.exports = app => async interaction => {
       
   return await interaction.reply( {
     content: stripIndents`\u200B\n
-      Copy your DiscordId: **${ user.id }**.
-      Paste it into the Account Page of [swgohcounters.com](https://swgohcounters.com/account)`, 
+      Copy your DiscordId: **${ user.id }**
+      Log into [swgohcounters.com](https://swgohcounters.com/account)
+      Paste it into the Account Page`, 
     ephemeral: true 
   } );
 };
