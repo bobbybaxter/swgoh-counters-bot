@@ -1,7 +1,13 @@
 module.exports = async ( log, routes, user ) => {
   let accessToken, expiresIn, patreonUser, patronStatus, refreshToken, tier;
   const { id } = user;
-  ( { accessToken, expiresIn, refreshToken, tier } = user );
+  ( {
+    accessToken,
+    expiresIn,
+    patronStatus,
+    refreshToken,
+    tier 
+  } = user );
 
   if ( accessToken ) {
     try {
