@@ -1,0 +1,435 @@
+**ARC Trooper**: ARCTROOPER501ST, ARC Trooper, arctrooper, arc501, arc 
+
+**Aayla Secura**: AAYLASECURA, Aayla Secura, aayla, secura, as 
+
+**Admiral Ackbar**: ADMIRALACKBAR, Admiral Ackbar, ackbar, aa 
+
+**Admiral Piett**: ADMIRALPIETT, Admiral Piett, piett, ap 
+
+**Ahsoka Tano**: AHSOKATANO, Ahsoka Tano, ahsoka, tano, at 
+
+**Ahsoka Tano (Fulcrum)**: FULCRUMAHSOKA, Ahsoka Tano (Fulcrum), fulcrum, fat, atf 
+
+**Amilyn Holdo**: AMILYNHOLDO, Amilyn Holdo, amilyn, holdo, ah 
+
+**Asajj Ventress**: ASAJVENTRESS, Asajj Ventress, asajj, ventress, av 
+
+**Aurra Sing**: AURRA_SING, Aurra Sing, aurra, sing 
+
+**B1 Battle Droid**: B1BATTLEDROIDV2, B1 Battle Droid, b1 
+
+**B2 Super Battle Droid**: B2SUPERBATTLEDROID, B2 Super Battle Droid, b2 
+
+**BB-8**: BB8, BB-8 
+
+**Bad Batch Echo**: BADBATCHECHO, Bad Batch Echo, bbecho, bbe 
+
+**Bad Batch Omega**: BADBATCHOMEGA, Bad Batch Omega, omega, bbo 
+
+**Barriss Offee**: BARRISSOFFEE, Barriss Offee, barris, barriss, zarris, bo, boz 
+
+**Bastila Shan**: BASTILASHAN, Bastila Shan, bastila, bs 
+
+**Bastila Shan (Fallen)**: BASTILASHANDARK, Bastila Shan (Fallen), badstila, bsf 
+
+**Baze Malbus**: BAZEMALBUS, Baze Malbus, baze, bm 
+
+**Biggs Darklighter**: BIGGSDARKLIGHTER, Biggs Darklighter, biggs, bd 
+
+**Bistan**: BISTAN 
+
+**Bo-Katan Kryze**: BOKATAN, Bo-Katan Kryze, Bo Katan, katan, bk, bok 
+
+**Boba Fett**: BOBAFETT, Boba Fett, boba, fett, bf 
+
+**Boba Fett, Scion of Jango**: BOBAFETTSCION, Boba Fett, Scion of Jango, Boba Fett Scion, bfscion, bobafatt, scion, bf2, bfat, bfs 
+
+**Bodhi Rook**: BODHIROOK, Bodhi Rook, bodhi, br 
+
+**Bossk**: BOSSK 
+
+**C-3PO**: C3POLEGENDARY, C-3PO, 3p0, 3po, c3, c3p0, c3po 
+
+**CC-2224 "Cody"**: CC2224, CC-2224 "Cody", cody 
+
+**CT-21-0408 "Echo"**: CT210408, CT-21-0408 "Echo", echo 
+
+**CT-5555 "Fives"**: CT5555, CT-5555 "Fives", fives 
+
+**CT-7567 "Rex"**: CT7567, CT-7567 "Rex", rex 
+
+**Cad Bane**: CADBANE, Cad Bane, cad, bane, cb 
+
+**Canderous Ordo**: CANDEROUSORDO, Canderous Ordo, canderous, ordo, cand
+
+**Captain Han Solo**: HOTHHAN, Captain Han Solo, chs 
+
+**Captain Phasma**: PHASMA, Captain Phasma, cp 
+
+**Cara Dune**: CARADUNE, Cara Dune, cara, dune, cd 
+
+**Carth Onasi**: CARTHONASI, Carth Onasi, carth, onasi 
+
+**Cassian Andor**: CASSIANANDOR, Cassian Andor, cassian, andor, cass, ca 
+
+**Chewbacca**: CHEWBACCALEGENDARY, Chewbacca, chewie, chewy, chew 
+
+**Chief Chirpa**: CHIEFCHIRPA, Chief Chirpa, chirpa, cc 
+
+**Chief Nebit**: CHIEFNEBIT, Chief Nebit, nebit, cn 
+
+**Chirrut Îmwe**: CHIRRUTIMWE, Chirrut Îmwe, chirrut, ci 
+
+**Chopper**: CHOPPERS3, Chopper, chop 
+
+**Clone Sergeant - Phase I**: CLONESERGEANTPHASEI, Clone Sergeant - Phase I, clonesarge, sergeant, sarge, csp1 
+
+**Clone Wars Chewbacca**: CLONEWARSCHEWBACCA, Clone Wars Chewbacca, cwchewie, cwc 
+
+**Colonel Starck**: COLONELSTARCK, Colonel Starck, starck, cs 
+
+**Commander Ahsoka Tano**: COMMANDERAHSOKA, Commander Ahsoka, cat 
+
+**Commander Luke Skywalker**: COMMANDERLUKESKYWALKER, Commander Luke Skywalker, cls 
+
+**Coruscant Underworld Police**: CORUSCANTUNDERWORLDPOLICE, Coruscant Underworld Police, cup 
+
+**Count Dooku**: COUNTDOOKU, Count Dooku, dooku 
+
+**Dark Trooper**: DARKTROOPER, Dark Trooper, darkt, drkt, dark 
+
+**Darth Malak**: DARTHMALAK, Darth Malak, malak 
+
+**Darth Maul**: MAUL, Darth Maul, darthmaul, dm 
+
+**Darth Nihilus**: DARTHNIHILUS, Darth Nihilus, nihilus, nih, dn 
+
+**Darth Revan**: DARTHREVAN, Darth Revan, drevan, dr 
+
+**Darth Sidious**: DARTHSIDIOUS, Darth Sidious, sidious, sid 
+
+**Darth Sion**: DARTHSION, Darth Sion, sion 
+
+**Darth Talon**: DARTHTALON, Darth Talon, talon 
+
+**Darth Traya**: DARTHTRAYA, Darth Traya, traya 
+
+**Darth Vader**: VADER, Darth Vader, dv 
+
+**Dash Rendar**: DASHRENDAR, Dash Rendar, dash, rendar 
+
+**Dathcha**: DATHCHA, dath 
+
+**Death Trooper**: DEATHTROOPER, Death Trooper, death, dt 
+
+**Dengar**: DENGAR 
+
+**Director Krennic**: DIRECTORKRENNIC, Director Krennic, krennic, dk
+
+**Droideka**: DROIDEKA, ddk 
+
+**Eeth Koth**: EETHKOTH, Eeth Koth, eeth, koth, ek 
+
+**Embo**: EMBO 
+
+**Emperor Palpatine**: EMPERORPALPATINE, Emperor Palpatine, palp, ep 
+
+**Enfys Nest**: ENFYSNEST, Enfys Nest, enfys, nest 
+
+**Ewok Elder**: EWOKELDER, Ewok Elder, elder, ee 
+
+**Ewok Scout**: EWOKSCOUT, Ewok Scout, scout, es 
+
+**Ezra Bridger**: EZRABRIDGERS3, Ezra Bridger, ezra 
+
+**Fennec Shand**: FENNECSHAND, Fennec Shand, fennec, shand, fs 
+
+**Finn**: FINN, fin, ogfinn 
+
+**First Order Executioner**: FIRSTORDEREXECUTIONER, First Order Executioner, fox 
+
+**First Order Officer**: FIRSTORDEROFFICERMALE, First Order Officer, foo 
+
+**First Order SF TIE Pilot**: FIRSTORDERSPECIALFORCESPILOT, First Order SF TIE Pilot, fosftp, sftp 
+
+**First Order Stormtrooper**: FIRSTORDERTROOPER, First Order Stormtrooper, fost 
+
+**First Order TIE Pilot**: FIRSTORDERTIEPILOT, First Order TIE Pilot, fotp 
+
+**Gamorrean Guard**: GAMORREANGUARD, Gamorrean Guard, gamoreean, guard, gamg 
+
+**Gar Saxon**: GARSAXON, Gar Saxon, gar, saxon 
+
+**Garazeb "Zeb" Orrelios**: ZEBS3, Garazeb "Zeb" Orrelios, zeb 
+
+**General Grievous**: GRIEVOUS, General Grievous, grievous, gg 
+
+**General Hux**: GENERALHUX, General Hux, GeneralHux, hux, gh 
+
+**General Kenobi**: GENERALKENOBI, General Kenobi, gk 
+
+**General Skywalker**: GENERALSKYWALKER, General Skywalker, generalskywalker, GeneralAnakinSkywalker, gas 
+
+**General Veers**: VEERS, General Veers, veers, gv 
+
+**Geonosian Brood Alpha**: GEONOSIANBROODALPHA, Geonosian Brood Alpha, alpha, brood, gba 
+
+**Geonosian Soldier**: GEONOSIANSOLDIER, Geonosian Soldier, soldier 
+
+**Geonosian Spy**: GEONOSIANSPY, Geonosian Spy, spy 
+
+**Grand Admiral Thrawn**: GRANDADMIRALTHRAWN, Grand Admiral Thrawn, thrawn, gat 
+
+**Grand Master Yoda**: GRANDMASTERYODA, Grand Master Yoda, gmy 
+
+**Grand Moff Tarkin**: GRANDMOFFTARKIN, Grand Moff Tarkin, tarkin, gmt 
+
+**Greedo**: GREEDO 
+
+**Greef Karga**: GREEFKARGA, Greef Karga, greef, karga 
+
+**HK-47**: HK47, HK-47, hk
+
+**Han Solo**: HANSOLO, Han Solo, oghan, raidhan, han 
+
+**Hera Syndulla**: HERASYNDULLAS3, Hera Syndulla, hera 
+
+**Hermit Yoda**: HERMITYODA, Hermit Yoda, hy, hyoda, hoda 
+
+**Hoth Rebel Scout**: HOTHREBELSCOUT, Hoth Rebel Scout, hrso 
+
+**Hoth Rebel Soldier**: HOTHREBELSOLDIER, Hoth Rebel Soldier, hrsc 
+
+**Hunter**: BADBATCHHUNTER, Hunter, hunt, bbh 
+
+**IG-100 MagnaGuard**: MAGNAGUARD, IG-100 MagnaGuard, ig-100, ig100, magna 
+
+**IG-11**: IG11, IG-11 
+
+**IG-86 Sentinel Droid**: IG86SENTINELDROID, IG-86 Sentinel Droid, ig-86, ig86 
+
+**IG-88**: IG88, IG-88 
+
+**Iden Versio**: IDENVERSIOEMPIRE, Iden Versio, iden, versio 
+
+**Ima-Gun Di**: IMAGUNDI, Ima-Gun Di, igd 
+
+**Imperial Probe Droid**: IMPERIALPROBEDROID, Imperial Probe Droid, ipd 
+
+**Imperial Super Commando**: IMPERIALSUPERCOMMANDO, Imperial Super Commando, isc 
+
+**Jango Fett**: JANGOFETT, Jango Fett, jango, jf 
+
+**Jawa**: JAWA 
+
+**Jawa Engineer**: JAWAENGINEER, Jawa Engineer, engineer, je 
+
+**Jawa Scavenger**: JAWASCAVENGER, Jawa Scavenger, scavenger, js 
+
+**Jedi Consular**: JEDIKNIGHTCONSULAR, Jedi Consular, consular, jc 
+
+**Jedi Knight Anakin**: ANAKINKNIGHT, Jedi Knight Anakin, anakin, jka 
+
+**Jedi Knight Guardian**: JEDIKNIGHTGUARDIAN, Jedi Knight Guardian, jkg 
+
+**Jedi Knight Luke**: JEDIKNIGHTLUKE, Jedi Knight Luke, JediKnightLuke, JediLuke, jkls, jkl 
+
+**Jedi Knight Revan**: JEDIKNIGHTREVAN, Jedi Knight Revan, jkr 
+
+**Jedi Master Kenobi**: JEDIMASTERKENOBI, Jedi Master Kenobi, glk, glow, jmk 
+
+**Jedi Master Luke Skywalker**: GRANDMASTERLUKE, Jedi Master Luke Skywalker, gml, jml, jmls 
+
+**Jolee Bindo**: JOLEEBINDO, Jolee Bindo, jolee, bindo, jb 
+
+**Juhani**: JUHANI 
+
+**Jyn Erso**: JYNERSO, Jyn Erso, jyn 
+
+**K-2SO**: K2SO, K-2SO, k-2, k2 
+
+**Kanan Jarrus**: KANANJARRUSS3, Kanan Jarrus, kanan, kj 
+
+**Ki-Adi-Mundi**: KIADIMUNDI, Ki-Adi-Mundi, ki, adi, mundi, kiadimundi, kam 
+
+**Kit Fisto**: KITFISTO, Kit Fisto, kit, fisto
+
+**Kuiil**: KUIIL, Kuiil, kul 
+
+**Kyle Katarn**: KYLEKATARN, Kyle Katarn, kyle, katarn, kk 
+
+**Kylo Ren**: KYLOREN, Kylo Ren, kylo, ogkylo, kr 
+
+**Kylo Ren (Unmasked)**: KYLORENUNMASKED, Kylo Ren (Unmasked), matt, kru 
+
+**L3-37**: L3_37, L3-37, l337, l3 
+
+**Lando Calrissian**: ADMINISTRATORLANDO, Lando Calrissian, lando, lc 
+
+**Lobot**: LOBOT 
+
+**Logray**: LOGRAY 
+
+**Lord Vader**: LORDVADER, Lord Vader, glvader, lv 
+
+**Luke Skywalker (Farmboy)**: LUKESKYWALKER, Luke Skywalker (Farmboy), farmboy, lsf, fbl 
+
+**Luminara Unduli**: LUMINARAUNDULI, Luminara Unduli, lumi 
+
+**Mace Windu**: MACEWINDU, Mace Windu, mace, windu, mw 
+
+**Magmatrooper**: MAGMATROOPER, Magmatrooper, magma 
+
+**Mara Jade, The Emperor's Hand**: MARAJADE, Mara Jade, mara, jade, mj 
+
+**Maul**: MAULS7, cymaul, newmaul, dm2 
+
+**Mission Vao**: MISSIONVAO, Mission Vao, mission, vao, mv 
+
+**Mob Enforcer**: HUMANTHUG, Mob Enforcer, me 
+
+**Moff Gideon**: MOFFGIDEONS1, Moff Gideon, gid, gideon, mg 
+
+**Mon Mothma**: MONMOTHMA, Mon Mothma, mon, mothma, momo, mm 
+
+**Mother Talzin**: MOTHERTALZIN, Mother Talzin, talzin, mt 
+
+**Nightsister Acolyte**: NIGHTSISTERACOLYTE, Nightsister Acolyte, acolyte, na 
+
+**Nightsister Initiate**: NIGHTSISTERINITIATE, Nightsister Initiate, initiate, ni 
+
+**Nightsister Spirit**: NIGHTSISTERSPIRIT, Nightsister Spirit, spirit, ns 
+
+**Nightsister Zombie**: NIGHTSISTERZOMBIE, Nightsister Zombie, zombie, nz 
+
+**Nute Gunray**: NUTEGUNRAY, Nute Gunray, nute, gunray, ng 
+
+**Obi-Wan Kenobi (Old Ben)**: OLDBENKENOBI, Obi-Wan Kenobi (Old Ben), ben, ob, oldben 
+
+**Old Daka**: DAKA, Old Daka, daka, od 
+
+**Padmé Amidala**: PADMEAMIDALA, Padmé Amidala, padme, amidala, pa 
+
+**Pao**: PAO 
+
+**Paploo**: PAPLOO 
+
+**Plo Koon**: PLOKOON, Plo Koon, plo 
+
+**Poe Dameron**: POE, Poe Dameron, poe, pd
+
+**Poggle the Lesser**: POGGLETHELESSER, Poggle the Lesser, poggle, pog 
+
+**Princess Leia**: PRINCESSLEIA, Princess Leia, leia 
+
+**Qi'ra**: QIRA, Qi'ra 
+
+**Qui-Gon Jinn**: QUIGONJINN, Qui-Gon Jinn, qgj 
+
+**R2-D2**: R2D2_LEGENDARY, R2-D2, r2d2, r2 
+
+**Range Trooper**: RANGETROOPER, Range Trooper, range 
+
+**Rebel Officer Leia Organa**: HOTHLEIA, Rebel Officer Leia Organa, rolo 
+
+**Resistance Hero Finn**: EPIXFINN, Resistance Hero Finn, HeroFinn, ResistanceHeroFinn, rhf 
+
+**Resistance Hero Poe**: EPIXPOE, Resistance Hero Poe, HeroPoe, ResistanceHeroPoe, rhp 
+
+**Resistance Pilot**: RESISTANCEPILOT, Resistance Pilot, pilot, rp 
+
+**Resistance Trooper**: RESISTANCETROOPER, Resistance Trooper, rt 
+
+**Rey**: GLREY, glrey, glr 
+
+**Rey (Jedi Training)**: REYJEDITRAINING, Rey (Jedi Training), jtr, rjt 
+
+**Rey (Scavenger)**: REY, Rey (Scavenger), reyscav, scav 
+
+**Rose Tico**: ROSETICO, Rose Tico, rose, tico 
+
+**Royal Guard**: ROYALGUARD, Royal Guard, rg 
+
+**Sabine Wren**: SABINEWRENS3, Sabine Wren, sabine, wren, sw 
+
+**Savage Opress**: SAVAGEOPRESS, Savage Opress, savage, opress, so 
+
+**Scarif Rebel Pathfinder**: SCARIFREBEL, Scarif Rebel Pathfinder, scarif, rebel, pathfinder, srp 
+
+**Shaak Ti**: SHAAKTI, Shaak Ti, shaak 
+
+**Shoretrooper**: SHORETROOPER, shore, sht 
+
+**Sith Assassin**: SITHASSASSIN, Sith Assassin, assasin, sass, sa 
+
+**Sith Empire Trooper**: SITHTROOPER, Sith Empire Trooper, sit, set 
+
+**Sith Eternal Emperor**: SITHPALPATINE, Sith Eternal Emperor, emperor, see 
+
+**Sith Marauder**: SITHMARAUDER, Sith Marauder, marauder, sm 
+
+**Sith Trooper**: FOSITHTROOPER, Sith Trooper, fosithtrooper, fositht, fosit, st 
+
+**Snowtrooper**: SNOWTROOPER, snow 
+
+**Starkiller**: STARKILLER, star, killer, sk 
+
+**Stormtrooper**: STORMTROOPER, storm, gary 
+
+**Stormtrooper Han**: STORMTROOPERHAN, Stormtrooper Han, sthan, sth 
+
+**Sun Fac**: SUNFAC, Sun Fac, sf 
+
+**Supreme Leader Kylo Ren**: SUPREMELEADERKYLOREN, Supreme Leader Kylo Ren, glkr, supremeleader, slkr
+
+**T3-M4**: T3_M4, T3-M4, t3m4, t3 
+
+**TIE Fighter Pilot**: TIEFIGHTERPILOT, TIE Fighter Pilot, tfp 
+
+**Talia**: TALIA 
+
+**Tech**: BADBATCHTECH, Tech, bbt 
+
+**Teebo**: TEEBO 
+
+**The Armorer**: ARMORER, The Armorer, arm 
+
+**The Mandalorian**: THEMANDALORIAN, The Mandalorian, mando 
+
+**The Mandalorian (Beskar Armor)**: THEMANDALORIANBESKARARMOR, The Mandalorian (Beskar Armor), tmba, mba, bam 
+
+**Threepio & Chewie**: C3POCHEWBACCA, Threepio & Chewie, backpackchewie, 3bacca, 3chew, chewPO, 3pac 
+
+**Tusken Raider**: TUSKENRAIDER, Tusken Raider, tr 
+
+**Tusken Shaman**: TUSKENSHAMAN, Tusken Shaman, shaman, ts 
+
+**URoRRuR'R'R**: URORRURRR, URoRRuR'R'R, uror 
+
+**Ugnaught**: UGNAUGHT, uggy, ugg, ug 
+
+**Vandor Chewbacca**: YOUNGCHEWBACCA, Vandor Chewbacca, vandor, vc 
+
+**Veteran Smuggler Chewbacca**: SMUGGLERCHEWBACCA, Veteran Smuggler Chewbacca, vetchewie, vsc 
+
+**Veteran Smuggler Han Solo**: SMUGGLERHAN, Veteran Smuggler Han Solo, vethan, vshs 
+
+**Visas Marr**: VISASMARR, Visas Marr, visas, marr, vm 
+
+**Wampa**: WAMPA 
+
+**Wat Tambor**: WATTAMBOR, Wat Tambor, wat, tambor, wt 
+
+**Wedge Antilles**: WEDGEANTILLES, Wedge Antilles, wedge, wa 
+
+**Wicket**: WICKET 
+
+**Wrecker**: BADBATCHWRECKER, Wrecker, bbw 
+
+**Young Han Solo**: YOUNGHAN, Young Han Solo, yhan, yolo, yhs 
+
+**Young Lando Calrissian**: YOUNGLANDO, Young Lando Calrissian, ylando, ylc 
+
+**Zaalbar**: ZAALBAR, zaal, z 
+
+**Zam Wesell**: ZAMWESELL, Zam Wesell, zam

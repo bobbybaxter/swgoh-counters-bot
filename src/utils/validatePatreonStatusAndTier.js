@@ -16,7 +16,7 @@ module.exports = async ( log, routes, user ) => {
       patreonUser = await routes.patreon.getStatus( accessToken );
       ( { patronStatus, tier } = patreonUser );
 
-      if ( id === process.env.ADMIN_ID || process.env.VIP_IDS.split( ',' ).includes( id )) {
+      if ( id === process.env.ADMIN_ID ) {
         patronStatus = 'Active Patron';
         tier = 'Aurodium';
       }
