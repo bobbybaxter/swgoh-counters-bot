@@ -2,6 +2,8 @@ const _ = require( 'lodash' );
 const { stripIndents } = require( 'common-tags' );
 const { validateGuild, validatePatreonStatusAndTier } = require( 'src/utils' );
 
+const SINGLEDISCORDTIERS = [ 'Chromium', 'Aurodium' ];
+
 module.exports = ( { log, routes } ) => {
   return {
     name: 'interactionCreate',
@@ -38,7 +40,7 @@ module.exports = ( { log, routes } ) => {
 
       updatedUser.tier = 'Aurodium'; // TODO: remove after testing
 
-      if ( updatedUser.tier !== 'Aurodium' && !isCurrentGuildInFirebase ) {
+      if ( !SINGLEDISCORDTIERS.includes( updatedUser.tier ) && !isCurrentGuildInFirebase ) {
         if ( updatedUser.tier === '' ) {
           return await interaction.reply( {
             content: stripIndents`Our records show you're currently not a Patron, or your account is not linked.
