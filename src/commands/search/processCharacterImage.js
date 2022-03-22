@@ -56,7 +56,7 @@ module.exports = async ( {
       
     return await interaction.editReply( { files: [ image ] } );
   } catch ( e ) {
-    log.error( 'processCharacterImage Error', e );
+    log.error( e );
     return await interaction.editReply( `Error fetching squad - ${ characterString }` );
   }
 };

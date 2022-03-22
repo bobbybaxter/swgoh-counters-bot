@@ -38,12 +38,12 @@ module.exports = async app => {
   setComponent( client, 'events', events );
 
   const commandsData = commands.map( x => x.data );
-  
+
   try {
-    rest.put( Routes.applicationGuildCommands( process.env.CLIENT_ID, process.env.GUILD_ID ), { body: commandsData } );
+    rest.put( Routes.applicationCommands( process.env.CLIENT_ID ), { body: commandsData } );
     app.log.info( 'Successfully registered application commands.' );
   } catch ( e ) {
-    app.log.error( 'Application commands failed to register.', e );
+    app.log.error( e );
   }
 
   client.login( process.env.TOKEN );

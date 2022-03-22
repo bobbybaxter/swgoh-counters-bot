@@ -21,7 +21,7 @@ module.exports = ( { log } ) => async allyCode => {
         };
       } );
   } catch ( err ) {
-    log.error( 'Error fetching Player Data', err );
+    log.error( err );
     throw err;
   }
 };

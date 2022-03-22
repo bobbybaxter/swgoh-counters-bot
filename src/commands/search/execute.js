@@ -49,7 +49,7 @@ module.exports = app => async interaction => {
       } );
     }
   } catch ( err ) {
-    log.error( 'Search Error :>> ', err );
+    log.error( err );
     return await interaction.reply( `Search Error` );
   }
 };

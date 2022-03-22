@@ -23,7 +23,7 @@ module.exports = app => async ( oldAccessToken, oldRefreshToken ) => {
 
     return {};
   } catch ( err ) {
-    app.log.error( 'getRefreshedToken Error' );
+    app.log.error( err );
     throw err;
   }
 };
