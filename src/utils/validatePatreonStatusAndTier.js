@@ -27,7 +27,7 @@ module.exports = async ( log, routes, user ) => {
         tier = 'Aurodium';
       }
     } catch ( err ) {
-      log.error( 'getPatreonStatus error', err );
+      log.error( err );
       throw err;
     }
   }

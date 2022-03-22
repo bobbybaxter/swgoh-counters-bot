@@ -75,10 +75,10 @@ module.exports = ( { log, routes, toonImgs } ) => async interaction => {
       squadPower,
       counters: filteredResponse
     } );
-    
+
     return await interaction.editReply( { files: [ image ] } );
   } catch ( e ) {
-    log.error( 'fetch error', e );
-    return await interaction.editReply( `Error fetching squad - ${ squad }` );
+    log.error( e );
+    return await interaction.editReply( `Error fetching counter for ${ squadString }` );
   }
 };

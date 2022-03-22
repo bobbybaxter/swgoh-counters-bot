@@ -58,7 +58,7 @@ module.exports = async ( {
     
     return await interaction.editReply( { files: [ image ] } );
   } catch ( e ) {
-    log.error( 'processCounterImage Error', e );
+    log.error( e );
     return await interaction.editReply( `Error fetching counter = ${ opponentSquadString } vs ${ counterSquadString }` );
   }
 };

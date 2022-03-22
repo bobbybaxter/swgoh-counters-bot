@@ -110,7 +110,7 @@ module.exports = ( { log, routes } ) => {
       try {
         return await command.execute( interaction );
       } catch( e ) {
-        log.error( "interactionCreate Error", e );
+        log.error( e );
         return await interaction.reply( { content:"There was an error while executing this command!", ephermeral: true } );
       }
     }

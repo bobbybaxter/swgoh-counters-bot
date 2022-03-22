@@ -20,7 +20,7 @@ module.exports = async ( log, routes, fbUser, updatedUser ) => {
       guildIdFromSwgoh = swgohUser && swgohUser.guild_id ? swgohUser.guild_id.toString() : '';
       guildNameFromSwgoh = swgohUser && swgohUser.guild_name ? swgohUser.guild_name : '';
     } catch ( err ) {
-      log.error( 'getSwgohInfo error', err );
+      log.error( err );
       throw err;
     }
 
