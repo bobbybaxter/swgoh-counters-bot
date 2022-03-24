@@ -11,6 +11,7 @@ module.exports = ( { log, routes, toonImgs } ) => async interaction => {
   const seasonRangeType = options.getString( 'range' );
   const squadString = options.getString( 'opponent' );
   const squadPowerAbbr = options.getString( 'power' );
+  const shouldShowAll = !!options.getString( 'show_all' );
   const seasonNums = getSeasonRange( battleType, seasonRangeType );
   const selectedSeason = seasonNums[ 0 ];
   const squadPower = squadPowerAbbr ? ( squadPowerAbbr <= 100000 ? squadPowerAbbr * 1000 : parseInt( squadPowerAbbr, 10 )) : undefined;
@@ -70,6 +71,7 @@ module.exports = ( { log, routes, toonImgs } ) => async interaction => {
       battleType,
       seasonRangeType,
       seasonNums,
+      shouldShowAll,
       squad,
       squadPosition,
       squadPower,

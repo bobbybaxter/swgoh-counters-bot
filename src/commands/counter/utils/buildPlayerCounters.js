@@ -24,15 +24,16 @@ function determineCanvasHeight( rowNum, squadPower ) {
 }
 
 module.exports = async ( {
-  toonImgs,
   battleType,
+  counters,
+  shouldShowAll,
   seasonRangeType,
   seasonNums,
   squad,
   squadPower,
-  counters 
+  toonImgs,
 } ) => {
-  const rowNum = counters.length < 25 ? counters.length : 25;
+  const rowNum = ( shouldShowAll || counters.length < 25 ) ? counters.length : 25;
   const squadSize = parseInt( battleType.charAt( 0 ), 10 );
   const canvasHeight = determineCanvasHeight( rowNum, squadPower );
   const canvasWidth = squadSize === 5 ? 800 : 600;

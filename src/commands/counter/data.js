@@ -2,7 +2,7 @@ const { SlashCommandBuilder } = require( '@discordjs/builders' );
 
 module.exports = app => new SlashCommandBuilder()
   .setName( 'counter' )
-  .setDescription( 'Search counters based on two given squads' )
+  .setDescription( 'Search for counters against an opponent based on your roster' )
   .addStringOption( option => 
     option.setName( 'opponent' )
       .setDescription( 'List at least one toon. To add more, separate with slashes. ex: traya/sion/nihilus' )
@@ -20,4 +20,9 @@ module.exports = app => new SlashCommandBuilder()
     option.setName( 'battle_type' )
       .setDescription( '5v5 or 3v3' )
       .addChoice( '5v5', "5v5" )
-      .addChoice( '3v3', "3v3" ));
+      .addChoice( '3v3', "3v3" ))
+  .addStringOption( option =>
+    option.setName( 'show_all' )
+      .setDescription( 'Shows all counters instead of the default 25 maximum' )
+      .addChoice( 'True', "true" )
+      .addChoice( 'False', "false" ));

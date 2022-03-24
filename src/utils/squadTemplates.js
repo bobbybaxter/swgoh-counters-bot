@@ -2,7 +2,8 @@ module.exports = [
   {
     id: '501ST',
     name: '501st (GAS L)',
-    alias: [ '501st', 'generalskywalker', 'general skywalker', 'generalanakinskywalker', "gas" ],
+    alias: [ '!501st', '!generalskywalker', '!general skywalker', '!generalanakinskywalker', '!gas' ],
+    squadAbbr: 'GAS/ARC/Echo/Fives/Rex',
     squad: [
       { id: 'GENERALSKYWALKER', name: 'General Skywalker' },
       { id: 'ARCTROOPER501ST', name: 'ARC Trooper' },
@@ -14,7 +15,8 @@ module.exports = [
   {
     id: 'BADBATCH',
     name: 'Bad Batch',
-    alias: [ 'badbatch', 'bad batch', 'bb', 'hunter', 'hunt' ],
+    alias: [ '!badbatch', '!bad batch', '!bb', '!hunter', '!hunt' ],
+    squadAbbr: 'Hunter/Echo/Omega/Tech/Wrecker',
     squad: [
       { id: 'BADBATCHHUNTER', name: 'Hunter' },
       { id: 'BADBATCHECHO', name: 'Bad Batch Echo' },
@@ -26,7 +28,8 @@ module.exports = [
   {
     id: 'BASTILA',
     name: 'Bastila L w/ JMLS',
-    alias: [ 'bastilashan', 'bastila shan', 'bastila', 'bs', 'gml', 'jml', 'jmls' ],
+    alias: [ '!bastilashan', '!bastila shan', '!bastila', '!bs', '!gml', '!jml', '!jmls' ],
+    squadAbbr: 'Bastila/JMLS/Hoda/JKL/Wat',
     squad: [
       { id: 'BASTILASHAN', name: 'Bastila Shan' },
       { id: 'GRANDMASTERLUKE', name: 'Jedi Master Luke Skywalker' },
@@ -38,7 +41,8 @@ module.exports = [
   {
     id: 'BH_AURRA',
     name: 'Bounty Hunters (Aurra L)',
-    alias: [ 'bh_aurra', 'bhaurra', 'aurra_sing', 'aurra sing', 'aurra', 'sing' ],
+    alias: [ '!bh_aurra', '!bhaurra', '!aurra_sing', '!aurra sing', '!aurra', '!sing' ],
+    squadAbbr: 'Aurra/Bossk/Greef/Mando/Zam',
     squad: [
       { id: 'AURRA_SING', name: 'Aurra Sing' },
       { id: 'BOSSK', name: 'Bossk' },
@@ -50,7 +54,8 @@ module.exports = [
   {
     id: 'BH_BOSSK',
     name: 'Bounty Hunters (Bossk L)',
-    alias: [ 'bh_bossk', 'bhbossk', 'bossk' ],
+    alias: [ '!bh_bossk', '!bhbossk', '!bossk' ],
+    squadAbbr: 'Bossk/Boba/Greef/Jango/Mando',
     squad: [
       { id: 'BOSSK', name: 'Bossk' },
       { id: 'BOBAFETT', name: 'Boba Fett' },
@@ -62,7 +67,8 @@ module.exports = [
   {
     id: 'BH_JANGO',
     name: 'Bounty Hunters (Jango L)',
-    alias: [ 'bh_jango', 'bhjango', 'jangofett', 'jango fett', 'jango', 'jf' ],
+    alias: [ '!bh_jango', '!bhjango', '!jangofett', '!jango fett', '!jango', '!jf' ],
+    squadAbbr: 'Jango/Boba/Bossk/Greef/Mando',
     squad: [
       { id: 'JANGOFETT', name: 'Jango Fett' },
       { id: 'BOBAFETT', name: 'Boba Fett' },
@@ -74,19 +80,21 @@ module.exports = [
   {
     id: 'BH_Zam',
     name: 'Bounty Hunters (Zam L)',
-    alias: [ 'bh_zam', 'bhzam', 'zamwesell', 'zam wesell', 'zam' ],
+    alias: [ '!bh_zam', '!bhzam', '!zamwesell', '!zam wesell', '!zam' ],
+    squadAbbr: 'Zam/Cad/Dengar/Embo/IG-88',
     squad: [
-      { id: 'JANGOFETT', name: 'Jango Fett' },
-      { id: 'BOBAFETT', name: 'Boba Fett' },
-      { id: 'BOSSK', name: 'Bossk' },
-      { id: 'GREEFKARGA', name: 'Greef Karga' },
-      { id: 'THEMANDALORIAN', name: 'The Mandalorian' }
+      { id: 'ZAMWESELL', name: 'Zam Wesell' },
+      { id: 'CADBANE', name: 'Cad Bane' },
+      { id: 'DENGAR', name: 'Dengar' },
+      { id: 'EMBO', name: 'Embo' },
+      { id: 'IG88', name: 'IG-88' }
     ]
   },
   {
     id: 'CLONES_REX',
     name: 'Clones (Rex L)',
-    alias: [ 'clonesrex', 'ct7567', 'ct-7567 "rex"', 'rex' ],
+    alias: [ '!clonesrex', '!ct7567', '!CT-7567 "Rex"', "Rex" ],
+    squadAbbr: 'Rex/ARC/Barriss/Echo/Fives',
     squad: [
       { id: 'CT7567', name: 'CT-7567 "Rex"' },
       { id: 'ARCTROOPER501ST', name: 'ARC Trooper' },
@@ -98,7 +106,8 @@ module.exports = [
   {
     id: 'CLONES_SHAAKTI',
     name: 'Clones (Shaak Ti L)',
-    alias: [ 'clonesshaak', 'shaakti', 'shaakti', 'shaak' ],
+    alias: [ '!clonesshaak', '!shaak ti', '!shaakti', '!shaak' ],
+    squadAbbr: 'Shaak/ARC/Echo/Fives/Rex',
     squad: [
       { id: 'SHAAKTI', name: 'Shaak Ti' },
       { id: 'ARCTROOPER501ST', name: 'ARC Trooper' },
@@ -110,7 +119,8 @@ module.exports = [
   {
     id: 'CLS',
     name: 'Rebels (CLS L)',
-    alias: [ 'commanderlukeskywalker', 'commander luke skywalker', 'cls' ],
+    alias: [ '!commanderlukeskywalker', '!commander luke skywalker', '!cls' ],
+    squadAbbr: 'CLS/Threepio/C-3PO/Chewie/Han',
     squad: [
       { id: 'COMMANDERLUKESKYWALKER', name: 'Commander Luke Skywalker' },
       { id: 'C3POCHEWBACCA', name: 'Threepio & Chewie' },
@@ -122,10 +132,11 @@ module.exports = [
   {
     id: 'EMPIRE_EP',
     name: 'Empire (EP L)',
-    alias: [ 'emperorpalpatine', 'emperor palpatine', 'palpatine', 'palp', 'ep' ],
+    alias: [ '!emperorpalpatine', '!emperor palpatine', '!palpatine', '!palp', '!ep' ],
+    squadAbbr: 'EP/MaraJade/OldBen/Starkiller/Visas',
     squad: [
       { id: 'EMPERORPALPATINE', name: 'Emperor Palpatine' },
-      { id: 'MARAJADE', name: "Mara Jade, The Emperor's Hand" },
+      { id: 'MARAJADE', name: 'Mara Jade, The Emperor\'s Hand' },
       { id: 'OLDBENKENOBI', name: 'Obi-Wan Kenobi (Old Ben)' },
       { id: 'STARKILLER', name: 'Starkiller' },
       { id: 'VISASMARR', name: 'Visas Marr' }
@@ -134,7 +145,8 @@ module.exports = [
   {
     id: 'EMPIRE_IDEN',
     name: 'Empire (Iden L)',
-    alias: [ "idenversioempire", "iden versio", "iden", "versio", "iv" ],
+    alias: [ '!idenversioempire', '!iden versio', '!iden', '!versio', '!iv' ],
+    squadAbbr: 'Iden/Death/Magma/Snow/Storm',
     squad: [
       { id: 'IDENVERSIOEMPIRE', name: 'Iden Versio' },
       { id: 'DEATHTROOPER', name: 'Death Trooper' },
@@ -146,7 +158,8 @@ module.exports = [
   {
     id: 'EWOKS',
     name: 'Ewoks',
-    alias: [ 'ewoks', 'chiefchirpa', 'chief chirpa', 'chirpa', 'cc' ],
+    alias: [ '!ewoks', '!chiefchirpa', '!chief chirpa', '!chirpa', '!cc' ],
+    squadAbbr: 'Chirpa/Elder/Logray/Paploo/Wicket',
     squad: [
       { id: 'CHIEFCHIRPA', name: 'Chief Chirpa' },
       { id: 'EWOKELDER', name: 'Ewok Elder' },
@@ -158,7 +171,8 @@ module.exports = [
   {
     id: 'FO_HUX',
     name: 'First Order (Hux L)',
-    alias: [ 'fohux', 'fogh', 'generalhux', 'general hux', 'hux', 'gh' ],
+    alias: [ '!fohux', '!fogh', '!generalhux', '!general hux', '!hux', '!gh' ],
+    squadAbbr: 'Hux/FOX/ST/Kylo/KRU',
     squad: [
       { id: 'GENERALHUX', name: 'General Hux' },
       { id: 'FIRSTORDEREXECUTIONER', name: 'First Order Executioner' },
@@ -170,7 +184,8 @@ module.exports = [
   {
     id: 'FO_KRU',
     name: 'First Order (KRU L)',
-    alias: [ 'fokru', 'kylorenunmasked', 'kylo ren (unmasked)', 'matt', 'kru' ],
+    alias: [ '!fokru', '!kylorenunmasked', '!kylo ren (unmasked)', '!matt', '!kru' ],
+    squadAbbr: 'KRU/FOX/FOSFTP/Kylo/Phasma',
     squad: [
       { id: 'KYLORENUNMASKED', name: 'Kylo Ren (Unmasked)' },
       { id: 'FIRSTORDEREXECUTIONER', name: 'First Order Executioner' },
@@ -182,7 +197,8 @@ module.exports = [
   {
     id: 'FO_PHASMA',
     name: 'First Order (Phasma L)',
-    alias: [ 'fophasma', 'focp', 'phasma', 'captain phasma', 'cp' ],
+    alias: [ '!fophasma', '!focp', '!phasma', '!captainphasma', '!captain phasma', '!cp' ],
+    squadAbbr: 'Phasma/FOX/FOSFTP/FOTP/Kylo',
     squad: [
       { id: 'PHASMA', name: 'Captain Phasma' },
       { id: 'FIRSTORDEREXECUTIONER', name: 'First Order Executioner' },
@@ -194,7 +210,8 @@ module.exports = [
   {
     id: 'GALACTICREPUBLIC',
     name: 'Galactic Republic',
-    alias: [ 'galacticrepublic', 'gr', 'padmeadmidala', 'padme amidala', 'padme', 'amidala', 'pa' ],
+    alias: [ '!galacticrepublic', '!galactic republic', '!gr', '!padmeadmidala', '!padme amidala', '!padme', '!amidala', '!pa' ],
+    squadAbbr: 'Padme/JKA/Ahsoka/GK/Barriss',
     squad: [
       { id: 'PADMEAMIDALA', name: 'Padmé Amidala' },
       { id: 'ANAKINKNIGHT', name: 'Jedi Knight Anakin' },
@@ -206,7 +223,8 @@ module.exports = [
   {
     id: 'GEONOSIANS',
     name: 'Geonosians',
-    alias: [ 'geonosians', 'geos', 'geo', 'geonosianbroodalpha', 'geonosian brood alpha', 'alpha', 'brood', 'gba' ],
+    alias: [ '!geonosians', '!geos', '!geo', '!geonosianbroodalpha', '!geonosian brood alpha', '!geonosian', '!brood', '!alpha', '!gba' ],
+    squadAbbr: 'GBA/SunFac/Soldier/Spy/Poggle',
     squad: [
       { id: 'GEONOSIANBROODALPHA', name: 'Geonosian Brood Alpha' },
       { id: 'SUNFAC', name: 'Sun Fac' },
@@ -218,7 +236,8 @@ module.exports = [
   {
     id: 'GG',
     name: 'Grievous L',
-    alias: [ 'gg', 'ggseps', 'ggdroids', 'grievous', 'general grievous' ],
+    alias: [ '!gg', '!ggseps', '!ggdroids', '!grievous', '!generalgrievous', '!general grievous' ],
+    squadAbbr: 'GG/B1/DDK/B2/MagnaGuard',
     squad: [
       { id: 'GRIEVOUS', name: 'General Grievous' },
       { id: 'B1BATTLEDROIDV2', name: 'B1 Battle Droid' },
@@ -230,7 +249,8 @@ module.exports = [
   {
     id: 'GGNUTE',
     name: 'Grievous L w/ Nute',
-    alias: [ 'ggnute', 'grievousnute' ],
+    alias: [ '!ggnute', '!grievousnute' ],
+    squadAbbr: 'GG/B1/B2/MagnaGuard/Nute',
     squad: [
       { id: 'GRIEVOUS', name: 'General Grievous' },
       { id: 'B1BATTLEDROIDV2', name: 'B1 Battle Droid' },
@@ -242,7 +262,8 @@ module.exports = [
   {
     id: 'GLREY',
     name: 'Rey L',
-    alias: [ 'glrey', 'glr' ],
+    alias: [ '!glrey', '!glr' ],
+    squadAbbr: 'GLRey/Holdo/HeroFinn/HeroPoe/L3-37',
     squad: [
       { id: 'GLREY', name: 'Rey' },
       { id: 'AMILYNHOLDO', name: 'Amilyn Holdo' },
@@ -254,7 +275,8 @@ module.exports = [
   {
     id: 'IMPERIALTROOPERS',
     name: 'Imperial Troopers',
-    alias: [ 'imperialtroopers', 'imperial troopers', 'generalveers', 'general veers', 'veers', 'gv' ],
+    alias: [ '!imperialtroopers', '!imperial troopers', '!generalveers', '!general veers', '!veers', '!gv' ],
+    squadAbbr: 'Veers/Piett/Starck/Gideon/Range',
     squad: [
       { id: 'VEERS', name: 'General Veers' },
       { id: 'ADMIRALPIETT', name: 'Admiral Piett' },
@@ -266,7 +288,8 @@ module.exports = [
   {
     id: 'JAWAS',
     name: 'Jawas',
-    alias: [ 'jawas', 'chiefnebit', 'chief nebit', 'nebit', 'cn' ],
+    alias: [ '!jawas', '!chiefnebit', '!chief nebit', '!nebit', '!cn' ],
+    squadAbbr: 'Nebit/Engineer/Scavenger/Jawa/Dathcha',
     squad: [
       { id: 'CHIEFNEBIT', name: 'Chief Nebit' },
       { id: 'JAWAENGINEER', name: 'Jawa Engineer' },
@@ -278,7 +301,8 @@ module.exports = [
   {
     id: 'JEDI_JKR',
     name: 'Jedi (JKR L)',
-    alias: [ 'jediknightrevan', 'jedi knight revan', 'jkr' ],
+    alias: [ '!jediknightrevan', '!jedi knight revan', '!jkr' ],
+    squadAbbr: 'JKR/Bastila/GMY/Hoda/Jolee',
     squad: [
       { id: 'JEDIKNIGHTREVAN', name: 'Jedi Knight Revan' },
       { id: 'BASTILASHAN', name: 'Bastila Shan' },
@@ -290,7 +314,8 @@ module.exports = [
   {
     id: 'JEDI_QGJ',
     name: 'Jedi (QGJ L)',
-    alias: [ 'quigonjinn', 'qui-gon jinn', 'qgj' ],
+    alias: [ '!quigonjinn', '!qui-gon jinn', '!qui gon jinn', '!qgj' ],
+    squadAbbr: 'QGJ/JKA/Barriss/GK/KAM',
     squad: [
       { id: 'QUIGONJINN', name: 'Qui-Gon Jinn' },
       { id: 'ANAKINKNIGHT', name: 'Jedi Knight Anakin' },
@@ -302,7 +327,8 @@ module.exports = [
   {
     id: 'JMK',
     name: 'Jedi Master Kenobi L',
-    alias: [ 'jedimasterkenobi', 'jedi master kenobi', 'glk', 'glow', 'jmk' ],
+    alias: [ '!jedimasterkenobi', '!jedi master kenobi', '!glk', '!glow', '!jmk' ],
+    squadAbbr: 'JMK/Ahsoka/CAT/GK/Padme',
     squad: [
       { id: 'JEDIMASTERKENOBI', name: 'Jedi Master Kenobi' },
       { id: 'AHSOKATANO', name: 'Ahsoka Tano' },
@@ -314,7 +340,8 @@ module.exports = [
   {
     id: 'OR_CARTH',
     name: 'Old Republic (Carth L)',
-    alias: [ 'orcarth', "or", 'carthonasi', 'carth onasi', 'carth', 'onasi' ],
+    alias: [ '!orcarth', '!or', '!carthonasi', '!carth onasi', '!carth', '!onasi' ],
+    squadAbbr: 'Carth/Ordo/Juhani/Mission/Zaalbar',
     squad: [
       { id: 'CARTHONASI', name: 'Carth Onasi' },
       { id: 'CANDEROUSORDO', name: 'Canderous Ordo' },
@@ -326,7 +353,8 @@ module.exports = [
   {
     id: 'LORDVADER',
     name: 'Lord Vader L',
-    alias: [ 'lordvader', "lord vader", "glvader", "lv" ],
+    alias: [ '!lordvader', '!lord vader', '!glvader', '!lv' ],
+    squadAbbr: 'LV/MAUL/RG/Shore/Storm',
     squad: [
       { id: 'LORDVADER', name: 'Lord Vader' },
       { id: 'MAULS7', name: 'Maul' },
@@ -338,7 +366,8 @@ module.exports = [
   {
     id: 'MANDO_BO',
     name: 'Mandalorian (Bo-Katan L)',
-    alias: [ "bokatan", "bo-katan kryze", "bo katan", "katan", "bk", "bok" ],
+    alias: [ '!bokatan', '!bo katan', '!bo-katan', '!bokatan kryze', '!bo katan kryze', '!bo-katan kryze', '!katan', '!bk', '!bok' ],
+    squadAbbr: 'BoKatan/Ordo/Gar/ISC/Sabine',
     squad: [
       { id: 'BOKATAN', name: 'Bo-Katan Kryze' },
       { id: 'CANDEROUSORDO', name: 'Canderous Ordo' },
@@ -350,7 +379,8 @@ module.exports = [
   {
     id: 'MANDO_MAUL',
     name: 'Mandalorian (Maul L)',
-    alias: [ 'mandomaul', "mauls7", "cymaul", "newmaul", "dm2" ],
+    alias: [ '!mandomaul', '!mauls7', '!cymaul', '!newmaul', '!dm2' ],
+    squadAbbr: 'Maul/Armorer/BoKatan/Ordo/Jango',
     squad: [
       { id: 'MAULS7', name: 'Maul' },
       { id: 'ARMORER', name: 'The Armorer' },
@@ -362,7 +392,8 @@ module.exports = [
   {
     id: 'MONMOTHMA',
     name: 'Mon Mothma L',
-    alias: [ 'monmothma', 'mon mothma', 'mon', 'mothma', 'momo', 'mm' ],
+    alias: [ '!monmothma', '!mon mothma', '!mon', '!mothma', '!momo', '!mm' ],
+    squadAbbr: 'MM/Cara/HRScout/Kyle/Pao',
     squad: [
       { id: 'MONMOTHMA', name: 'Mon Mothma' },
       { id: 'CARADUNE', name: 'Cara Dune' },
@@ -374,7 +405,8 @@ module.exports = [
   {
     id: 'MONMOTHMA_WIGGS',
     name: 'Mon Mothma L w/ Wiggs',
-    alias: [ 'monmothmawiggs', 'momowiggs', 'mmwiggs' ],
+    alias: [ '!monmothmawiggs', '!momowiggs', '!mmwiggs' ],
+    squadAbbr: 'MM/Baze/Biggs/Chirrut/Wedge',
     squad: [
       { id: 'MONMOTHMA', name: 'Mon Mothma' },
       { id: 'BAZEMALBUS', name: 'Baze Malbus' },
@@ -386,7 +418,8 @@ module.exports = [
   {
     id: 'NS_ASAJJ',
     name: 'Nightsisters (Asajj L)',
-    alias: [ 'asajventress', 'asajj ventress', 'asajj', 'ventress', 'av' ],
+    alias: [ '!asajventress', '!asajj ventress', '!asajj', '!ventress', '!nsasajj', '!av' ],
+    squadAbbr: 'Asajj/Daka/Talzin/Spirit/Zombie',
     squad: [
       { id: 'ASAJVENTRESS', name: 'Asajj Ventress' },
       { id: 'DAKA', name: 'Old Daka' },
@@ -398,7 +431,8 @@ module.exports = [
   {
     id: 'NS_TALZIN',
     name: 'Nightsisters (Talzin L)',
-    alias: [ 'mothertalzin', 'mother talzin', 'talzin', 'mt' ],
+    alias: [ '!mothertalzin', '!mother talzin', '!talzin', '!nstalzin', '!mt' ],
+    squadAbbr: 'Talzin/Asajj/Daka/Zombie/Spirit',
     squad: [
       { id: 'MOTHERTALZIN', name: 'Mother Talzin' },
       { id: 'ASAJVENTRESS', name: 'Asajj Ventress' },
@@ -410,7 +444,8 @@ module.exports = [
   {
     id: 'NUTE_SEP',
     name: 'Nute Separatists',
-    alias: [ 'nutegunray', 'nute gunray', 'nute', 'gunray', 'nutesep', 'ngsep' ],
+    alias: [ '!nutegunray', '!nute gunray', '!nute', '!gunray', '!nutesep', '!ngsep' ],
+    squadAbbr: 'Nute/Dooku/DDK/Nest/Jengo',
     squad: [
       { id: 'NUTEGUNRAY', name: 'Nute Gunray' },
       { id: 'COUNTDOOKU', name: 'Count Dooku' },
@@ -422,7 +457,8 @@ module.exports = [
   {
     id: 'PHOENIX',
     name: 'Phoenix',
-    alias: [ 'phoenix', "herasyndullas3", "hera syndulla", "hera", 'syndulla' ],
+    alias: [ '!phoenix', '!herasyndullas3', '!hera syndulla', '!hera', '!syndulla' ],
+    squadAbbr: 'Hera/Kanan/Zeb/Sabine/Ezra',
     squad: [
       { id: 'HERASYNDULLAS3', name: 'Hera Syndulla' },
       { id: 'KANANJARRUSS3', name: 'Kanan Jarrus' },
@@ -434,7 +470,8 @@ module.exports = [
   {
     id: 'PHOENIX_CHOP',
     name: 'Phoenix w/ Chopper',
-    alias: [ 'phoenixchop', "herachop" ],
+    alias: [ '!phoenixchop', '!herachop' ],
+    squadAbbr: 'Hera/Chopper/Kanan/Sabine/Zeb',
     squad: [
       { id: 'HERASYNDULLAS3', name: 'Hera Syndulla' },
       { id: 'CHOPPERS3', name: 'Chopper' },
@@ -446,7 +483,8 @@ module.exports = [
   {
     id: 'ROGUEONE',
     name: 'Rogue One',
-    alias: [ 'rogueone', 'rogue one', 'ro', "jynerso", "jyn erso", "jyn" ],
+    alias: [ '!rogueone', '!rogue one', '!ro', '!jynerso', '!jyn erso', '!jyn' ],
+    squadAbbr: 'Jyn/Cassian/K-2SO/Chirrut/Baze',
     squad: [
       { id: 'JYNERSO', name: 'Jyn Erso' },
       { id: 'CASSIANANDOR', name: 'Cassian Andor' },
@@ -458,7 +496,8 @@ module.exports = [
   {
     id: 'Scoundrels_BAM',
     name: 'Scoundrels (BAM L)',
-    alias: [ 'themandalorianbeskararmor', 'the mandalorian (beskar armor)', 'tmba', 'mba', 'bam' ],
+    alias: [ '!themandalorianbeskararmor', '!the mandalorian (beskar armor)', '!tmba', '!mba', '!bam' ],
+    squadAbbr: 'BAM/Dengar/Nest/IG-11/Kuiil',
     squad: [
       { id: 'THEMANDALORIANBESKARARMOR',name: 'The Mandalorian (Beskar Armor)' },
       { id: 'DENGAR', name: 'Dengar' },
@@ -470,7 +509,8 @@ module.exports = [
   {
     id: 'Scoundrels_BAM_NEST',
     name: 'Scoundrels (BAM L) w/ Nest',
-    alias: [ 'tmbanest', 'mbanest', 'bamnest' ],
+    alias: [ '!tmbanest', '!mbanest', '!bamnest' ],
+    squadAbbr: 'BAM/Nest/IG-11/Kuiil/L3-37',
     squad: [
       { id: 'THEMANDALORIANBESKARARMOR',name: 'The Mandalorian (Beskar Armor)' },
       { id: 'ENFYSNEST', name: 'Enfys Nest' },
@@ -482,11 +522,12 @@ module.exports = [
   {
     id: 'SCOUNDRELS_DASH',
     name: 'Scoundrels (Dash L)',
-    alias: [ "dashrendar", "dash rendar", "dash", "rendar" ],
+    alias: [ '!dashrendar', '!dash rendar', '!dash', '!rendar' ],
+    squadAbbr: 'Dash/L3-37/Qira/Vandor/YoungHan',
     squad: [
       { id: 'DASHRENDAR', name: 'Dash Rendar' },
       { id: 'L3_37', name: 'L3-37' },
-      { id: 'QIRA', name: "Qi'ra" },
+      { id: 'QIRA', name: 'Qi\'ra' },
       { id: 'YOUNGCHEWBACCA', name: 'Vandor Chewbacca' },
       { id: 'YOUNGHAN', name: 'Young Han Solo' }
     ]
@@ -494,9 +535,10 @@ module.exports = [
   {
     id: 'SCOUNDRELS_QIRA',
     name: 'Scoundrels (Qi\'ra L)',
-    alias: [ 'qira', 'qi\'ra' ],
+    alias: [ '!qira', '!qi\'ra' ],
+    squadAbbr: 'Qira/L3-37/Mission/Vandor/Zaalbar',
     squad: [
-      { id: 'QIRA', name: "Qi'ra" },
+      { id: 'QIRA', name: 'Qi\'ra' },
       { id: 'L3_37', name: 'L3-37' },
       { id: 'MISSIONVAO', name: 'Mission Vao' },
       { id: 'YOUNGCHEWBACCA', name: 'Vandor Chewbacca' },
@@ -506,7 +548,8 @@ module.exports = [
   {
     id: 'SCOUNDRELS_SCION',
     name: 'Scoundrels (Scion L)',
-    alias: [ 'bobafettscion', 'bobafett, scion of jango', 'boba fett scion', 'bfscion', 'bobafatt', 'scion', 'bf2', 'bfat', 'bfs' ],
+    alias: [ '!bobafettscion', '!bobafett, scion of jango', '!boba fett scion', '!bfscion', '!bobafatt', '!scion', '!bf2', '!bfat', '!bfs' ],
+    squadAbbr: 'BobaScion/Fennec/IG-11/Kuiil/BAM',
     squad: [
       { id: 'BOBAFETTSCION', name: 'Boba Fett, Scion of Jango' },
       { id: 'FENNECSHAND', name: 'Fennec Shand' },
@@ -518,7 +561,8 @@ module.exports = [
   {
     id: 'SEE',
     name: 'Sith Eternal Emperor L',
-    alias: [ 'sithpalpatine', 'sith eternal emperor', 'emperor', 'see' ],
+    alias: [ '!sithpalpatine', '!sith eternal emperor', '!emperor', '!see' ],
+    squadAbbr: 'SEE/Dooku/Sidious/DarthMaul/SET',
     squad: [
       { id: 'SITHPALPATINE', name: 'Sith Eternal Emperor' },
       { id: 'COUNTDOOKU', name: 'Count Dooku' },
@@ -530,7 +574,8 @@ module.exports = [
   {
     id: 'RESISTANCE_FINN',
     name: 'Resistance (Finn L)',
-    alias: [ 'resistancefinn', 'resistancerfinn', 'finn', 'fin', 'ogfinn' ],
+    alias: [ '!resistancefinn', '!resistance finn', '!finn', '!fin', '!ogfinn' ],
+    squadAbbr: 'Finn/Poe/RT/VetChewie/VetHan',
     squad: [
       { id: 'FINN', name: 'Finn' },
       { id: 'POE', name: 'Poe Dameron' },
@@ -542,7 +587,8 @@ module.exports = [
   {
     id: 'RESISTANCE_JTR',
     name: 'Resistance (JTR L)',
-    alias: [ 'resistancejtr', 'resistancerjt', 'reyjeditraining', 'rey (jedi training)', 'jtr', 'rjt' ],
+    alias: [ '!resistancejtr', '!resistance rjt', '!reyjeditraining', 'jeditrainingrey', '!rey (jedi training)', '!jtr', '!rjt' ],
+    squadAbbr: 'RJT/BB-8/HeroFinn/HeroPoe/R2-D2',
     squad: [
       { id: 'REYJEDITRAINING', name: 'Rey (Jedi Training)' },
       { id: 'BB8', name: 'BB-8' },
@@ -554,7 +600,8 @@ module.exports = [
   {
     id: 'SE',
     name: 'Sith Empire w/o Malak',
-    alias: [ 'sithempire', 'se_nomalak' ],
+    alias: [ '!sithempire', '!se_nomalak' ],
+    squadAbbr: 'DR/BSF/HK/Marauder/SET',
     squad: [
       { id: 'DARTHREVAN', name: 'Darth Revan' },
       { id: 'BASTILASHANDARK', name: 'Bastila Shan (Fallen)' },
@@ -566,7 +613,8 @@ module.exports = [
   {
     id: 'SE_MALAK',
     name: 'Sith Empire w/ Malak',
-    alias: [ 'semalak', 'darthrevan', 'darth revan', 'drevan', 'dr' ],
+    alias: [ '!semalak', '!darthrevan', '!darth revan', '!drevan', '!dr' ],
+    squadAbbr: 'DR/BSF/Malak/HK/Marauder',
     squad: [
       { id: 'DARTHREVAN', name: 'Darth Revan' },
       { id: 'BASTILASHANDARK', name: 'Bastila Shan (Fallen)' },
@@ -578,7 +626,8 @@ module.exports = [
   {
     id: 'SITHTRIO',
     name: 'Sith Triumvirate',
-    alias: [ 'sithtrio', 'trio', 'darthtraya', 'darth traya', 'traya' ],
+    alias: [ '!sithtrio', '!trio', '!darthtraya', '!darth traya', '!traya' ],
+    squadAbbr: 'Traya/Nihilus/Sidious/Sion/DarthMaul',
     squad: [
       { id: 'DARTHTRAYA', name: 'Darth Traya' },
       { id: 'DARTHNIHILUS', name: 'Darth Nihilus' },
@@ -590,7 +639,8 @@ module.exports = [
   {
     id: 'SLKR',
     name: 'Supreme Leader Kylo Ren L',
-    alias: [ 'supremeleaderkyloren', 'supreme leader kylo ren', 'glkr', 'supremeleader', 'slkr' ],
+    alias: [ '!supremeleaderkyloren', '!supreme leader kylo ren', '!glkr', '!supremeleader', '!slkr' ],
+    squadAbbr: 'SLKR/FOST/ST/Hux/KRU',
     squad: [
       { id: 'SUPREMELEADERKYLOREN', name: 'Supreme Leader Kylo Ren' },
       { id: 'FIRSTORDERTROOPER', name: 'First Order Stormtrooper' },
