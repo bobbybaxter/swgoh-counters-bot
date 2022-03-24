@@ -17,12 +17,12 @@ module.exports = async ( {
 
   const opponentSquad = parseCharString( battleType, opponentSquadString );
   if ( !Array.isArray( opponentSquad )) {
-    return await interaction.reply( `${ opponentSquadString } vs ${ counterSquadString }.  Opponent Squad character "${ opponentSquad }" not found.` );
+    return await interaction.editReply( `${ opponentSquadString } vs ${ counterSquadString }.  Opponent Squad character "${ opponentSquad }" not found.` );
   }
 
   const counterSquad = parseCharString( battleType, counterSquadString );
   if ( !Array.isArray( counterSquad )) {
-    return await interaction.reply( `${ opponentSquadString } vs ${ counterSquadString }.  Counter Squad character "${ counterSquad }" not found.` );
+    return await interaction.editReply( `${ opponentSquadString } vs ${ counterSquadString }.  Counter Squad character "${ counterSquad }" not found.` );
   }
 
   try {
@@ -34,15 +34,15 @@ module.exports = async ( {
 
     if ( response.length === 0 ) { 
       if ( !seasonRangeType || seasonRangeType === 'three' ) {
-        return await interaction.reply( `No counters for ${ opponentSquadString } vs ${ counterSquadString } over the last 3 GAC seasons.  Try a longer range.` ); 
+        return await interaction.editReply( `No counters for ${ opponentSquadString } vs ${ counterSquadString } over the last 3 GAC seasons.  Try a longer range.` ); 
       }
 
       if ( seasonRangeType === 'all' ) {
-        return await interaction.reply( `No counters for ${ opponentSquadString } vs ${ counterSquadString } over all seasons.` ); 
+        return await interaction.editReply( `No counters for ${ opponentSquadString } vs ${ counterSquadString } over all seasons.` ); 
       }
 
       if ( seasonRangeType === 'last' ) {
-        return await interaction.reply( `No counters for ${ opponentSquadString } vs ${ counterSquadString } from last season.  Try a longer range.` ); 
+        return await interaction.editReply( `No counters for ${ opponentSquadString } vs ${ counterSquadString } from last season.  Try a longer range.` ); 
       }
     }
 

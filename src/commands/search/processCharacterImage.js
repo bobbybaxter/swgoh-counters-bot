@@ -19,7 +19,7 @@ module.exports = async ( {
 
   const squad = parseCharString( battleType, characterString );
   if ( !Array.isArray( squad )) {
-    return await interaction.reply( `${ characterString } - Character "${ squad }" not found.` );
+    return await interaction.editReply( `${ characterString } - Character "${ squad }" not found.` );
   }
 
   try {
@@ -31,15 +31,15 @@ module.exports = async ( {
 
     if ( response.length === 0 ) { 
       if ( !seasonRangeType || seasonRangeType === 'three' ) {
-        return await interaction.reply( `No counters for ${ characterString } over the last 3 GAC seasons.  Try a longer range.` ); 
+        return await interaction.editReply( `No counters for ${ characterString } over the last 3 GAC seasons.  Try a longer range.` ); 
       }
 
       if ( seasonRangeType === 'all' ) {
-        return await interaction.reply( `No counters for ${ characterString } over all seasons.` ); 
+        return await interaction.editReply( `No counters for ${ characterString } over all seasons.` ); 
       }
 
       if ( seasonRangeType === 'last' ) {
-        return await interaction.reply( `No counters for ${ characterString } from last season.  Try a longer range.` ); 
+        return await interaction.editReply( `No counters for ${ characterString } from last season.  Try a longer range.` ); 
       }
     }
 
