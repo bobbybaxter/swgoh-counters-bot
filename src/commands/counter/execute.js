@@ -19,9 +19,9 @@ module.exports = ( { log, routes, toonImgs } ) => async interaction => {
   const squad = parseCharString( battleType, squadString );
   if ( !Array.isArray( squad )) {
     if ( squad.charAt( 0 ) === "!" ) {
-      return await interaction.reply( `Squad "${ squad }" not found.` );
+      return await interaction.reply( `Squad "${ squad }" not found.  Use "/help alias" to search for available squad abbreviations.` );
     } else {
-      return await interaction.reply( `${ squadString } - Squad character "${ squad }" not found.` );
+      return await interaction.reply( `${ squadString } - Squad character "${ squad }" not found.  If you meant to search a squad, add a "!" before your request.  Ex. !bb` );
     }
   }
 
