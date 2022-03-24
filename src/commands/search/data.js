@@ -2,7 +2,7 @@ const { SlashCommandBuilder } = require( '@discordjs/builders' );
 
 module.exports = app => new SlashCommandBuilder()
   .setName( 'search' )
-  .setDescription( 'Returns counters for a given character' )
+  .setDescription( 'Returns counters for the given character(s) or squad(s)' )
   .addSubcommand( subcommand =>
     subcommand.setName( 'counter' )
       .setDescription( 'Search counters based on two given squads' )

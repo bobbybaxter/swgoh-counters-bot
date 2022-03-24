@@ -6,8 +6,7 @@ module.exports = ( battleType, squadString ) => {
   const blankToon = { id: 'BLANK', name: 'Blank' };
 
   if ( squadString.charAt( 0 ) === "!" ) {
-    const squadAlias = squadString.slice( 1 );
-    const squadTemplate = squadTemplates.find( x => x.alias.map( x => x.toLowerCase()).includes( squadAlias.toLowerCase()));
+    const squadTemplate = squadTemplates.find( x => x.alias.map( y => y.toLowerCase()).includes( squadString.toLowerCase()));
     if ( squadTemplate ) {
       fullSquad.push( ...squadTemplate.squad );
     } else {

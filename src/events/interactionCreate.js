@@ -10,6 +10,7 @@ module.exports = ( { log, routes } ) => {
     async execute( interaction, client ) {
       let updatedUser;
       const { channel, commandName, options, user } = interaction;
+      const command = client.commands.get( interaction.commandName );
       const position = options.get( 'position', false );
       const rangeOption = options.get( 'range', false );
       const powerOption = options.get( 'power', false );
@@ -72,7 +73,6 @@ module.exports = ( { log, routes } ) => {
 
       if ( commandName === 'search' ) {
         const subcommand = options.getSubcommand();
-      
         if ( subcommand === 'counter' ) {
           const opponent = options.getString( 'opponent' );
           const counter = options.getString( 'counter' );
@@ -103,9 +103,21 @@ module.exports = ( { log, routes } ) => {
         log.info( `${ user.tag } in #${ channel.name } searched counter for squad: ${ opponent }, ${ power }, ${ range }, ${ battleType }` );
       }
 
-      if( !interaction.isCommand()) { return; }
+      if ( commandName === 'help' ) {
+        const subcommand = options.getSubcommand();
+        if ( subcommand === 'alias' ) {
+          const name = options.getString( 'name' );
+          log.info( `${ user.tag } in #${ channel.name } searched help ${ subcommand } for ${ name }` );
+        }
 
-      const command = client.commands.get( interaction.commandName );
+        if ( subcommand === 'commands' ) {
+          log.info( `${ user.tag } in #${ channel.name } searched help commands` );
+        }
+
+        return await command.execute( interaction, client.commands );
+      }
+
+      if( !interaction.isCommand()) { return; }
 
       try {
         return await command.execute( interaction );

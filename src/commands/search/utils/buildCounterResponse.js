@@ -31,7 +31,7 @@ module.exports = async ( toonImgs, battleType, seasonRangeType, seasonNums, oppo
   buildMetricTitles( ctx, 67.5, 100, 'Avg Win %' );
   buildMetricTitles( ctx, 115, 100, 'Avg Banners' );
   await buildOpponentSquad( { ctx, squad: opponentSquad, squadSize, toonImgs, type: 'counter' } );
-  await buildCounterSquad( { ctx, squad: opponentSquad, squadSize, toonImgs, type: 'counter' } );
+  await buildCounterSquad( { ctx, squad: counterSquad, squadSize, toonImgs, type: 'counter' } );
   await buildRows( { ctx, canvasWidth, counters: response, rowNum, squadSize, toonImgs } );
   buildSubText( ctx, canvasHeight, canvasWidth );
   buildSeasonText( ctx, canvasHeight, seasonNums, seasonRangeType );
